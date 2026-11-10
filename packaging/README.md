@@ -34,4 +34,5 @@ dch --create --package readout --newversion 0.1.0-1 --distribution unstable "Ini
 dpkg-buildpackage -us -uc
 ```
 
-Debian 13 (trixie) is the oldest supported release: it has GNOME 48 and Plasma 6.3.
+Release packages are built on Ubuntu 26.04 LTS (Plasma 6.6, GNOME 50).
+The Plasma widget needs Plasma 6.4 or later, so on Debian 13 (Plasma 6.3, GNOME 48) only the daemon and the GNOME extension build; configure with `-DREADOUT_BUILD_PLASMA=OFF` there.

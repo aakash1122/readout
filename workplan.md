@@ -207,7 +207,7 @@ Rules:
 
 ## 5. KDE Plasma frontend
 
-Target: Plasma 6.3 or newer, Qt 6.8 or newer, KDE Frameworks 6 (development machine runs Plasma 6.8).
+Target: Plasma 6.4 or newer (6.4 added `plasma_add_applet`), Qt 6.8 or newer, KDE Frameworks 6 (development machine runs Plasma 6.8).
 
 ### 5.1 Structure
 
@@ -456,7 +456,7 @@ Settled:
 | Decision | Choice |
 |---|---|
 | Lowest GNOME version | 48 (Debian 13). Ubuntu 24.04 (GNOME 46) is not supported. |
-| Lowest Plasma version | 6.3 (Debian 13). |
+| Lowest Plasma version | 6.4, for `plasma_add_applet`. Debian 13 (Plasma 6.3) gets only the daemon and the GNOME extension. |
 | Project name | Readout |
 | App ID, D-Bus name, interface | `io.github.aakash1122.Readout`, with the versioned interface `io.github.aakash1122.Readout1` |
 | Daemon and CLI | `readoutd` and `readoutctl` |

@@ -31,16 +31,15 @@ sudo dnf install ~/rpmbuild/RPMS/x86_64/readout-0.1.0-*.rpm ~/rpmbuild/RPMS/x86_
 sudo dnf install ~/rpmbuild/RPMS/x86_64/readout-0.1.0-*.rpm ~/rpmbuild/RPMS/noarch/gnome-shell-extension-readout-0.1.0-*.rpm
 ```
 
-### Debian and Ubuntu
+### Ubuntu and Debian
 
-Debian 13 (trixie) and Ubuntu 25.04 or later have the Plasma and GNOME versions Readout needs.
+Ubuntu 26.04 or later has the Plasma and GNOME versions Readout needs.
+On Debian 13, only the daemon and the GNOME extension build, because its Plasma is older than 6.4; use the *From source* steps with `-DREADOUT_BUILD_PLASMA=OFF` there.
 
 ```bash
-sudo apt install build-essential devscripts debhelper cmake ninja-build pkgconf python3 \
-    libsystemd-dev libgtest-dev dbus-daemon pci.ids extra-cmake-modules \
-    qt6-base-dev qt6-declarative-dev libkf6i18n-dev libkf6coreaddons-dev libkf6config-dev \
-    libplasma-dev libglib2.0-bin gettext
+sudo apt install devscripts equivs
 cp -r packaging/debian debian
+sudo mk-build-deps --install --remove debian/control
 dch --create --package readout --newversion 0.1.0-1 --distribution unstable "Local build."
 dpkg-buildpackage -us -uc -b
 ```
@@ -58,6 +57,10 @@ sudo dnf install cmake ninja-build gcc-c++ systemd-devel gtest-devel dbus-daemon
     extra-cmake-modules qt6-qtbase-devel qt6-qtdeclarative-devel \
     kf6-ki18n-devel kf6-kcoreaddons-devel kf6-kconfig-devel kf6-knotifications-devel \
     kf6-kquickcharts-devel kf6-kirigami-devel kf6-kcmutils libplasma-devel glib2-devel gettext
+
+# Debian and Ubuntu
+sudo apt install devscripts equivs
+sudo mk-build-deps --install --remove packaging/debian/control
 
 # Arch Linux
 sudo pacman -S --needed cmake ninja gcc pkgconf python systemd gtest dbus hwdata \
@@ -84,7 +87,7 @@ Leave out a desktop with `-DREADOUT_BUILD_PLASMA=OFF` or `-DREADOUT_BUILD_GNOME=
 ## Requirements
 
 - Linux with systemd
-- KDE Plasma 6.3 or later, or GNOME Shell 48 or later
+- KDE Plasma 6.4 or later, or GNOME Shell 48 or later
 - Optional: NetworkManager (Wi-Fi details), UPower (battery), BlueZ (Bluetooth), UDisks2 (disk health), the NVIDIA driver (NVIDIA GPUs)
 
 ## Features

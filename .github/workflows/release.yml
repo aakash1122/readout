@@ -1,0 +1,153 @@
+# Builds the Fedora and Debian packages and the GNOME extension zip for a version tag,
+# and publishes them as a GitHub Release.
+#
+# Release: bump the version in CMakeLists.txt, packaging/fedora/readout.spec and
+# packaging/arch/PKGBUILD, commit, then push a tag: git tag v0.2.0 && git push origin v0.2.0
+# A tag with a suffix (v0.2.0-rc1) makes a prerelease of the same version, for testing.
+# Running the workflow by hand (Actions > Release > Run workflow) builds every package
+# without publishing anything, to check the packaging before tagging.
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  source:
+    name: Source tarball
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      prerelease: ${{ steps.version.outputs.prerelease }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check that the tag matches the version everywhere
+        id: version
+        run: |
+          cmake_version=$(sed -n '/^project(readout/,/)/s/^ *VERSION \([0-9.]*\).*/\1/p' CMakeLists.txt)
+          if [ "$GITHUB_REF_TYPE" = tag ]; then tag="${GITHUB_REF_NAME#v}"; else tag="$cmake_version"; fi
+          version="${tag%%-*}"
+          spec_version=$(sed -n 's/^Version: *//p' packaging/fedora/readout.spec)
+          arch_version=$(sed -n 's/^pkgver=//p' packaging/arch/PKGBUILD)
+          echo "ref $GITHUB_REF_NAME, CMakeLists.txt $cmake_version, readout.spec $spec_version, PKGBUILD $arch_version"
+          for found in "$cmake_version" "$spec_version" "$arch_version"; do
+            if [ "$found" != "$version" ]; then
+              echo "::error::Tag $GITHUB_REF_NAME does not match the version $found in the sources"
+              exit 1
+            fi
+          done
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "prerelease=$([ "$tag" != "$version" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+      - name: Create the tarball
+        # git archive leaves out the reference/ submodule.
+        run: git archive --prefix="readout-${{ steps.version.outputs.version }}/" -o "readout-${{ steps.version.outputs.version }}.tar.gz" HEAD
+      - uses: actions/upload-artifact@v4
+        with:
+          name: source
+          path: readout-${{ steps.version.outputs.version }}.tar.gz
+          if-no-files-found: error
+
+  fedora:
+    name: Fedora packages
+    needs: source
+    runs-on: ubuntu-latest
+    container: fedora:44
+    env:
+      VERSION: ${{ needs.source.outputs.version }}
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: source
+      - name: Install build dependencies
+        run: |
+          tar -xzf "readout-$VERSION.tar.gz"
+          dnf install -y --setopt=install_weak_deps=False rpm-build gnome-shell
+          rpmspec -q --buildrequires "readout-$VERSION/packaging/fedora/readout.spec" \
+            | xargs dnf install -y --setopt=install_weak_deps=False
+      - name: Build the RPMs
+        run: |
+          mkdir -p rpmbuild/SOURCES
+          cp "readout-$VERSION.tar.gz" rpmbuild/SOURCES/
+          rpmbuild -ba --define "_topdir $PWD/rpmbuild" "readout-$VERSION/packaging/fedora/readout.spec"
+          mkdir out
+          find rpmbuild/RPMS -name '*.rpm' ! -name '*-debuginfo-*' ! -name '*-debugsource-*' -exec cp {} out/ \;
+      - name: Build the GNOME extension zip
+        run: |
+          cmake -S "readout-$VERSION" -B zip-build -DREADOUT_BUILD_DAEMON=OFF -DREADOUT_BUILD_PLASMA=OFF
+          cmake --build zip-build --target gnome-extension-zip
+          find zip-build -name '*.shell-extension.zip' -exec cp {} out/ \;
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fedora
+          path: out/*
+          if-no-files-found: error
+
+  ubuntu:
+    name: Ubuntu packages
+    needs: source
+    runs-on: ubuntu-latest
+    # Ubuntu 26.04 LTS: the oldest release with Plasma 6.4 or later (Debian 13 has 6.3).
+    container: ubuntu:26.04
+    env:
+      VERSION: ${{ needs.source.outputs.version }}
+      DEBIAN_FRONTEND: noninteractive
+      DEBEMAIL: aakash1122@users.noreply.github.com
+      DEBFULLNAME: Readout release workflow
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: source
+      - name: Install build dependencies
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends devscripts equivs
+          tar -xzf "readout-$VERSION.tar.gz"
+          cp -r "readout-$VERSION/packaging/debian" "readout-$VERSION/debian"
+          mk-build-deps --install --remove --tool "apt-get -y --no-install-recommends" "readout-$VERSION/debian/control"
+      - name: Build the DEBs
+        working-directory: readout-${{ needs.source.outputs.version }}
+        run: |
+          dch --create --package readout --newversion "$VERSION-1" --distribution unstable "Release $VERSION."
+          dpkg-buildpackage -us -uc -b
+          mkdir ../out
+          find .. -maxdepth 1 -name '*.deb' ! -name '*-dbgsym_*' -exec cp {} ../out/ \;
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ubuntu
+          path: out/*
+          if-no-files-found: error
+
+  release:
+    name: Publish the release
+    needs: [source, fedora, ubuntu]
+    if: github.ref_type == 'tag'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: files
+          merge-multiple: true
+      - name: Create the GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ needs.source.outputs.version }}
+          PRERELEASE: ${{ needs.source.outputs.prerelease }}
+        run: |
+          cd files
+          sha256sum -- * > SHA256SUMS
+          cat SHA256SUMS
+          flags=()
+          [ "$PRERELEASE" = true ] && flags+=(--prerelease)
+          gh release create "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" \
+            --title "Readout $VERSION" --generate-notes --verify-tag "${flags[@]}" -- *

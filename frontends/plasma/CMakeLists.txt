@@ -12,7 +12,8 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 find_package(Qt6 6.6 REQUIRED COMPONENTS Core Gui Qml Quick DBus)
 find_package(KF6 6.0 REQUIRED COMPONENTS I18n CoreAddons Config)
-find_package(Plasma 6.0 REQUIRED)
+# 6.4 added plasma_add_applet, which builds the widget below.
+find_package(Plasma 6.4 REQUIRED)
 
 # Optional at build time; the widget imports them from QML at run time.
 find_package(KF6KirigamiPlatform 6.0)

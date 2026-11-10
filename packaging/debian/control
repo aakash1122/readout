@@ -19,7 +19,18 @@ Build-Depends: debhelper-compat (= 13),
                libkf6config-dev,
                libplasma-dev,
                libglib2.0-bin,
-               gettext
+               gettext,
+               systemd,
+               qt6-declarative-dev-tools,
+               qml6-module-qtquick-controls,
+               qml6-module-qtquick-layouts,
+               qml6-module-qtquick-shapes,
+               qml6-module-qtquick-window,
+               qml6-module-org-kde-kcmutils,
+               qml6-module-org-kde-kirigami,
+               qml6-module-org-kde-ksvg,
+               qml6-module-org-kde-notifications,
+               qml6-module-org-kde-quickcharts
 Standards-Version: 4.7.0
 Homepage: https://github.com/aakash1122/readout
 Rules-Requires-Root: no
@@ -38,7 +49,7 @@ Package: plasma-widget-readout
 Architecture: linux-any
 Depends: ${shlibs:Depends}, ${misc:Depends}, readout (= ${binary:Version}),
          qml6-module-org-kde-quickcharts, qml6-module-org-kde-kirigami, qml6-module-org-kde-kcmutils,
-         qml6-module-org-kde-notifications, plasma-workspace (>= 4:6.3)
+         qml6-module-org-kde-notifications, plasma-workspace (>= 4:6.4)
 Description: Readout system monitor widget for KDE Plasma
  Panel widget for KDE Plasma 6 showing CPU, memory, disk, network, GPU,
  sensors, battery, Bluetooth and world clocks, with detailed popups and alerts.

@@ -23,6 +23,15 @@ BuildRequires:  cmake(KF6I18n)
 BuildRequires:  cmake(KF6CoreAddons)
 BuildRequires:  cmake(KF6Config)
 BuildRequires:  cmake(Plasma)
+# For the tests in the check section: busctl for the integration test, and every QML module the
+# widget imports, so qmllint can resolve them.
+BuildRequires:  systemd
+BuildRequires:  qt6-qtdeclarative
+BuildRequires:  kf6-kcmutils
+BuildRequires:  kf6-kirigami
+BuildRequires:  kf6-knotifications
+BuildRequires:  kf6-kquickcharts
+BuildRequires:  kf6-ksvg
 BuildRequires:  glib2-devel
 BuildRequires:  gettext
 
