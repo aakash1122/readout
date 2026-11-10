@@ -1,0 +1,25 @@
+
+0со2,83,8,10-11-,8,10-11-,
+0со3,83,8,10-110-11-,
+             0 kB
+Dirty:              3956 kB
+Writeback:            20 kB
+AnonPages:       2304416 kB
+Mapped:          2293644 kB
+Shme,10-11-,
+0со3,83,8,10-110-11-,
+             0 kB
+Dirty:              3956 kB
+Writeback:            20 kB
+AnonPages:       2304416 kB
+Mapped:          2293644 kB
+Shmem:            228052 kB
+KReclaimable:    2388376 kB
+Slab:            316m:            228052 kB
+KReclaimable:    2388376 kB
+Slab:            3161796 kB
+SReclaimable:    2388376 kB
+SUnreclaim:       773420 kB
+KernelStack:       46092 kB
+PageTables:       132532 kB
+SecPageTables:      50с83,о8,3,10-11-,8,10-1-,8,10-11-,8,11-118,11-11-

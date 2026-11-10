@@ -1,0 +1,51 @@
+Source: readout
+Section: utils
+Priority: optional
+Maintainer: aakash1122 <aakash1122@users.noreply.github.com>
+Build-Depends: debhelper-compat (= 13),
+               cmake,
+               ninja-build,
+               pkgconf,
+               python3,
+               libsystemd-dev,
+               libgtest-dev,
+               dbus-daemon,
+               pci.ids,
+               extra-cmake-modules,
+               qt6-base-dev,
+               qt6-declarative-dev,
+               libkf6i18n-dev,
+               libkf6coreaddons-dev,
+               libkf6config-dev,
+               libplasma-dev,
+               libglib2.0-bin,
+               gettext
+Standards-Version: 4.7.0
+Homepage: https://github.com/aakash1122/readout
+Rules-Requires-Root: no
+
+Package: readout
+Architecture: linux-any
+Depends: ${shlibs:Depends}, ${misc:Depends}, pci.ids, systemd, hicolor-icon-theme
+Suggests: network-manager, upower, bluez, udisks2
+Description: system monitor service for the Plasma and GNOME panels
+ readoutd is a small session D-Bus service that reads CPU, memory, disk,
+ network, GPU, sensor, battery and Bluetooth statistics for the Readout panel
+ widgets. It reads only what is on screen, starts on demand and exits when
+ unused. This package also contains the readoutctl command-line client.
+
+Package: plasma-widget-readout
+Architecture: linux-any
+Depends: ${shlibs:Depends}, ${misc:Depends}, readout (= ${binary:Version}),
+         qml6-module-org-kde-quickcharts, qml6-module-org-kde-kirigami,
+         qml6-module-org-kde-notifications, plasma-workspace (>= 4:6.3)
+Description: Readout system monitor widget for KDE Plasma
+ Panel widget for KDE Plasma 6 showing CPU, memory, disk, network, GPU,
+ sensors, battery, Bluetooth and world clocks, with detailed popups and alerts.
+
+Package: gnome-shell-extension-readout
+Architecture: all
+Depends: ${misc:Depends}, readout (>= ${source:Version}), gnome-shell (>= 48)
+Description: Readout system monitor for GNOME Shell
+ GNOME Shell extension showing CPU, memory, disk, network, GPU, sensors,
+ battery, Bluetooth and world clocks in the top bar, with detailed popups.

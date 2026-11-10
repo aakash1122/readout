@@ -1,0 +1,17 @@
+ overlay rw,seclabel,lowerdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1350/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/11/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/10/fs:/var/lib/containerd/io.containerdÆsnapshotter.v1.overlayfs/snapshots/9/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/8/fs:/var/lib/containerd/io.containerd.snapshow,nosuid,noexec,relatime shared:4 - devpts devpts rw,seclabel,gid=5,mode=600,ptmxmode=000
+45 43 0:26 / /sys rw,nosuid,nodev,noexec,relatime shared:5 - sysfs sysfs rw,seclabel
+4654  0:8 / /sys/kernel/security rw,nosuid,nodev,noexec,relatime shared:6 - securityfs securityfs rw
+47 45 0:30 / /sys/fs/cgroup rw,nosuid,nodev,noexec,relatime shared:7 - cgroup2 cgroup2 rw,seclabel,nsdelegate,memory_recursiveprot,SwapTotalgetlb_accoiunting
+48 457 nvme1n1p6 61 0 3296 28 027 28 0 0 0 0 0 0
+ 259       1 nvme0n1 481591 3790 211061152 112131 876995 4209 31149482 2773038 0 142722 3023733 215088 0 54494544 125575 14836 12988
+ 259       8 nvme0n1p1 539 962 13510 86 2 0 2 0 0 17 86 0 0 0 0 0 0
+ 259       9 nvme0n1p2 1070 18 183714 201 764 92 167280 168 0 200 369 0 0 0 0 0 0
+ 259      10 nvme0n1p3‡À»Œ780 2810 ware/efi/efed,nodev,noexec,relatime shared:9 - efivarfs efivarfs rw
+50 45 0:33 / /sys/fs/bpfint,nosuid,nodev,noexec,relatime shared:10 - bpf bpf rw,mode=700
+51 45 0:20 / /sys/kernel/config rw,nosuid,nodev,noexec,relatimelatime shared:6 - securityfs securityfs rw
+47 45 0:30/rchar: 1
+rs: 4096 /
+wri_r: 1
+read_bes /ssuid,nodev,noexec,relatime shared:13 - proc pbytroc res: 7939
+w
+53 43 0:hotter.v1.over

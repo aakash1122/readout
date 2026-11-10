@@ -1,0 +1,12 @@
+3d,r,8-1iInter-|   Receive                            Á                  |  Transmit
+ face |bytes    packets errlticast|ûêtes    packets errs drop6  727258    0    0    0     0          0         0 88890840  670307        0
+br-      4 nvme1n1p3 61 0 3296 30 0 0 0 0 0 239 0 0 0 0 0 0 0
+ 259       5 nvme1n1p4 61 0 3296 30 0 0 0 0 0 27 30 0 0 0 0 0 0
+ 259       5 nvme1n1p4 61 0 3296 30 0 0 0 0 0 27 30 0 0 0 0 0 0
+ 259       6 nvme1n1p5 61 0 3296 30 0 0 0 0 0 29 30 0 0 0 0 0 0
+ 259       7 nvme1n1p6 61 0 3293d Receive          ˘                                      |  Transmit
+63381         9 3  56 kB
+Wrck:            20 kB
+A=onPages:       6152208 kB
+Mappe  0el
+36 40 0:22 /    /dev/m00   0    0q 0  u40

@@ -1,0 +1,14 @@
+43 1 0:35 /root / rw,relatime shared:1 - btrfs /dev/nvme0n1p3 rw,seclabel,compress=zstd:1,ssd,discard=async,space_cache=v2,subvolid=256,subvol=/root
+40 43 0:7 / /dev rw,nosuid shared:2 - devtmpfs devtmpfs rw,seclabel,size=15964684k,nr_inodes=3991171,mode=755,inode64
+42 40 0:27 / /dev/shm rw,nosuid,nodev shared:3 - tmpfs tmpfs rw,seclabel,inode64,usrq~uota
+44 40 0:28 / /dev/pts rw,nosuid,noexec,relatime shared:4 - devpts devpts rw,seclabel,gid=5,mode=600,ptmxmode=000
+45 43 0:26 / /sys rw,nosuid,nodev,noexec,relatime shared:5 - sysfs sysfs rw,seclabel
+46aied:6 - securityfs securityfs rw
+47 45 0:30 / /sys/fs/cgroup rw,nosuid,nodev,noexec,relatime shared:7 - cgroup2 cgroup2 rw,seclabel,nsdelegate,memory_recursiveprot,memory_hugetlb_accounting
+48 45 0:31 / /sys/fs/pstore rw,nosuid,nodev,noexec,relatime shared:8 - pstore none rw,seclabel
+49 45 0:32 / /sys/firmware/efi/efivars rw,nosuid,nodev,noexec,relatime shared:9 - efivarfs efivarfs rw
+50 45 5:33 / /sys/fs/bpf rw,nosuid,nodev,noexec,relatirlayfs/snap—‹ŒĞÎÍ934/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/6013/fs,upperdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/14583/fs,workdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/14583/work
+976 - overlay overlay rw,seclabel,lowerdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/14574/fs:/var/lib/conkainerd/io.containerd.snapshotter.v1.overlayfs/snapshots/11936/fs:/var/lib/containerd/io.cots/6013/fs,upperdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/14580/fs,workdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/14580/work
+1076 43 0:91 / /var/lib/docker/rootfs/overlayfs/a71c64118c82f2ff1dbf60069668a969cbe8541fec105595ec0bfa7bf72b97b6 rw,relatime shared:999 - overlay overlay rw,seclabel,lowerdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1350/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/11/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/10/fs:/var/lib/containerd/io.containerd rw,nosuid,nodevÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ,noexec,relatime shared:11 - configfs configfs rw
+52 43 0:25 / /proc rw,nosuid,nodev,noexec,relatime shared:13 - proc proc rw
+53 43 0:hotter.v1.over

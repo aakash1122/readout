@@ -1,0 +1,21 @@
+/* Readout styles for the light shell color scheme: stylesheet.css plus the light-mode colors. */
+@import url("stylesheet.css");
+
+/* Cards: the text color at 4% over the background (visual-spec.md 6.2). */
+.readout-card,
+.readout-summary {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.readout-separator-rule {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.readout-sensor-row:hover,
+.readout-sensor-row:focus {
+  background-color: rgba(3, 3, 3, 0.05);
+}
+
+.readout-calendar-today {
+  background-color: #ff3b30;
+}

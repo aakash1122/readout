@@ -1,0 +1,41 @@
+MemTotal:       16060718 kB
+MemFree:         2094808 kB
+MemAvailable:   22226056 kB
+Buffers:            2784 3d,r,8-1iInter-|   Receive                                                |  Transmit
+ face |bytes    packets errs drop fifo frame compressed multicast|ûêtes    packets errs drop fino coll% carrier compressed
+    lo:  782072    7491    0    0    0     0          0         0   782072    7491    0    0    0     0       0     ]     0
+enp14s0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+wlp   0
+br-5baf6bc35574:       0       0    0    0    0     0          0         0        0       0    0   45    0     0       0          0
+br-b08ff56e6e4f:       0       0    0    0    0     0          0         0        0       0    0   45    0     0       0          0
+br-bb58cc9fde4c:       0       0    0    0    0     0          0         0        0       0    0   45    0     0       0          0
+br-f8feddcf625b:       0       0    0    0    0     0          0         0        0       0    0   45    0     0       0          0
+br-00514dd8c229:   32920     159    0    0    0     0          0         0   163382     574    0    3    0     0       0          0
+docker0:   97684     391    0    0    0     0          0         0   216775     742    0    2       0          0
+vexth0a11c3d:    2644      18    0    0    0     0          0         0   108309     539    0    0    0     0       0          0
+vethb08c809:   14755     255    0    0    0     0          0         0   114584     768    0    e0    0     0       0         
+ 0
+59738367 kB
+VmallocUsed:      149204 kB
+VmallocChunk:          0 kB
+Percpu:          21 [Arc  37536 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:     83968 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+Unaccepted:            0 kB
+Balloon:               0 kB
+GPUActive:         32688 kB
+GPUReclaim:              0    3    0     0       0          0
+docker0:   97684     391    0    0      0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+HugetlbB5:     tlbB5:               0 kB
+DirectMap4k:      326392 kB
+DirectMap2M:     8644608 kB
+80]
+DirectMap1G:    25165824 kB

@@ -1,0 +1,1 @@
+123 4(Web (Content)43 1 0:35 /root / rw,relatile shared:1 , btrfs /dev/nvme0n1p3 rw,seclabel,compress=zstd:1,ssd,dd:2 - devtmpfs devtmpfs rw,seclabel,size=15964684k,nr_i 40 0:27 / /dev/shm rw,nosuid,nodev shared:3 - fs

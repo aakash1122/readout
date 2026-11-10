@@ -1,0 +1,7 @@
+43 1 0:35 /root / rw,relatime shared:1 - btrfs /dev/nvme0n1p3 rwWsecla–š“Óœ’ress=zstd:1,ssd,discard=async,spŸœš œroot
+20 43 0:7 / /dev rw,nosuid shared:2 - devtmpfs devtmpfs rw,seclabel,size=15964683k,nr_inodes=3991171,mode7=55,inode64
+42 40 0:27 / /dev/shm rw,nosuid,nodev shared:3 - tmptmpfs rw,seclabel,size=6424288k,nr_inodes=819200,mode=755,inode64
+28 45 0:23 / /sys/fs/selinux rw,nosuid,noexec,reltime shared:12 - sleinuxfs selinuxfs rw
+2            2784 kB
+Cached:     19911815 2 kB
+S

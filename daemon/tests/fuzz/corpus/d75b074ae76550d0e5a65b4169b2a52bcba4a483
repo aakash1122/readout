@@ -1,0 +1,14 @@
+43 1 0:35 /root / rw,relatime shared:1 - btrfs /dev/nvme0n1p3 rw,seclabel,compress=zstd:1,ssd,discard=async,abel,size=1024k,nr/_inodes=10NFS_Unstableemage G20 [Arc B580]
+SwapCached591086092 kB
+PageTables:       13253224,mode=700,inode64,noswap
+35 45 0:14¼ / noexec,relatime sharedwapCached:            0 kB
+Active:          6739572 kB
+Inactive:       19323776 kB
+Act808fartio
+=e20b  
+ttleman
+šNFS_Unstableemage G20 [Arc B580]
+SwapCached591086092 kB
+PageTables:       132532 kB
+SecPageTabtable:        h591N
+

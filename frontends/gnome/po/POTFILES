@@ -1,0 +1,12 @@
+extension.js
+prefs.js
+lib/alerts.js
+lib/catalog.js
+lib/components.js
+lib/format.js
+lib/panelItem.js
+lib/panelWidgets.js
+lib/popups.js
+lib/summaries.js
+lib/values.js
+schemas/org.gnome.shell.extensions.readout.gschema.xml

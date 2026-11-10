@@ -1,0 +1,66 @@
+# clang-tidy for readoutd and the Plasma C++ module.
+# The daemon talks to C APIs (sd-bus varargs, syscalls), so the
+# C-interop guidelines that forbid varargs, pointer arithmetic and
+# reinterpret_cast are disabled. Everything else stays on.
+Checks: >
+  -*,
+  bugprone-*,
+  -bugprone-easily-swappable-parameters,
+  performance-*,
+  modernize-*,
+  -modernize-use-trailing-return-type,
+  -modernize-avoid-c-arrays,
+  readability-*,
+  -readability-magic-numbers,
+  -readability-identifier-length,
+  -readability-function-cognitive-complexity,
+  -readability-braces-around-statements,
+  -readability-implicit-bool-conversion,
+  cppcoreguidelines-*,
+  -cppcoreguidelines-avoid-magic-numbers,
+  -cppcoreguidelines-avoid-c-arrays,
+  -cppcoreguidelines-pro-type-vararg,
+  -cppcoreguidelines-pro-bounds-pointer-arithmetic,
+  -cppcoreguidelines-pro-bounds-array-to-pointer-decay,
+  -cppcoreguidelines-pro-bounds-constant-array-index,
+  -cppcoreguidelines-pro-type-reinterpret-cast,
+  -cppcoreguidelines-owning-memory,
+  -cppcoreguidelines-avoid-non-const-global-variables,
+  -cppcoreguidelines-pro-type-union-access,
+  -cppcoreguidelines-avoid-do-while,
+  -cppcoreguidelines-pro-bounds-avoid-unchecked-container-access,
+  -modernize-use-designated-initializers,
+  -bugprone-unchecked-optional-access,
+  -bugprone-multi-level-implicit-pointer-conversion,
+  -modernize-use-ranges,
+  -modernize-use-std-print,
+  -modernize-avoid-variadic-functions,
+  -modernize-pass-by-value,
+  -modernize-use-auto,
+  -cppcoreguidelines-missing-std-forward,
+  -cppcoreguidelines-non-private-member-variables-in-classes,
+  -cppcoreguidelines-avoid-const-or-ref-data-members,
+  -cppcoreguidelines-use-enum-class,
+  -performance-inefficient-string-concatenation,
+  -readability-avoid-nested-conditional-operator,
+  -readability-convert-member-functions-to-static,
+  -readability-math-missing-parentheses,
+  -readability-use-anyofallof
+WarningsAsErrors: ''
+HeaderFilterRegex: '(daemon|frontends)/.*'
+FormatStyle: file
+CheckOptions:
+  - key: readability-identifier-naming.ClassCase
+    value: CamelCase
+  - key: readability-identifier-naming.StructCase
+    value: CamelCase
+  - key: readability-identifier-naming.EnumCase
+    value: CamelCase
+  - key: readability-identifier-naming.FunctionCase
+    value: camelBack
+  - key: readability-identifier-naming.VariableCase
+    value: camelBack
+  - key: readability-identifier-naming.ParameterCase
+    value: camelBack
+  - key: readability-identifier-naming.NamespaceCase
+    value: lower_case

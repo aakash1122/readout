@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=@READOUT_BUS_NAME@
+Exec=@READOUT_DAEMON_PATH@
+SystemdService=readoutd.service

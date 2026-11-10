@@ -1,0 +1,18 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "aakash1122"
+            }
+        ],
+        "Category": "System Information",
+        "Description": "CPU, memory, disk, network, GPU, sensors and battery in your panel",
+        "Icon": "io.github.aakash1122.readout",
+        "License": "MIT",
+        "Name": "Readout",
+        "Version": "0.1.0",
+        "Website": "https://github.com/aakash1122/readout"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}

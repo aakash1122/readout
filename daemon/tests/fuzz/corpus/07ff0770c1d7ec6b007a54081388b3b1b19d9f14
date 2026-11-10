@@ -1,0 +1,8 @@
+ 259       0 nvme19       6 nvme1n1p5 61 0 3296 30 0 0 0         0        0       0    0    0    0     0         0        0
+wlp15s0: 567659812061 0 321234ÿÿÿÿÿÿ!ÿÿÿÿÿÿÿÿÿ         |  Transmit
+ face |bytes    packets errs drop fifo frame compressed multicBalloones    packets errs drop fifo colls carrier compressed
+    lo:  782072    7491    0    0    0     0          1         0   782072    7491    0    0    0     0       0          0
+enp14s0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+wlp15s0: 5676598120 4421473    0 4+730    0     0          0      w   0 159749043  693255    0    0    0     0       0          0
+tailscale0: 5211673176  727200 3       0       0    0    0    0     0          0         0        0      69 0 0 0 0 0 0
+ 259      10 nvme0n1p3àËÈÎ780 2810 20902464 11182  ö  0    0   45    0     0   0 

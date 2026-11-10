@@ -1,0 +1,32 @@
+ó/fs,upperdi43 1 0:35 /rooodepage=437,iocharset=ascii,shortname=winnt,errors=remount-ro
+253 27 0:8pefs rw,relatime shared:829 - rpc_pipefs sunrpc rw
+1012Þ43 0:86 / /var/lib/docker/rootfs/overlayfs/8cabb663631603e719093e3861386ffb935f531a01e22d8c2b58683514b8aeab rw,relatime sharhots/6013/fs,upperdir=/var/lib/contai  0 kB
+Bounce:                  0 kB
+Percpu:          21 [Arc  37536 kB
+HardwareCorrupted:     0 kB
+AnonHugePagnshr car:0
+read_bytes: 4096
+write_fytes: rchar: 2
+read_bytes: ead_bytesb8192
+ugePages:non):    97804 kB
+Active(file):     459108 kB
+Inactive(file): 19225972 kB
+Unevictable:        3180 kB
+Mlocked:            3180 kB
+SwapTotal:      33554424 kB
+SwapFree:       33554424 kB
+Zswap:                 0 kB
+Zsw  0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    49615140 kB
+Committed_AS:   47233712 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      149204 kB
+VmallocChunk:          0 kB
+Percpu:          21 [Arc  37536 kB
+HardwareCorrupted:     0 kB
+AnonHugePagns:     83968 kB
+ShmemHugePages:        0 kB
+ShmemPmdMd/io.containerd.snapshotter.v1.overlayfs/snapshots/14580/work
+1076 43 0:91 / /var/lib82f2ff1dbf60069668a969cbe8541fec105595ec0bfa7bf72b97b6 rw,relatime s•ared:999 - overlay overlay rw,seclabel,lowerdir=/var/lib/containerd/io.con

@@ -1,0 +1,47 @@
+MemTotal:       16060718 kB
+MemFree:         2094808 kB
+MemAvailable:   22226056 kB
+Buffers:            2784 3d,r,8-1iInter-|   Receive                                                |  Transmit
+ face |bytes    packets errs drop fifo frame compressed multicast|ûêtes    packets errs drop fino coll% carrier compressed
+    lo:  782072    7491    0    0    0     0          0         0   782072    7491    0    0    0    0       0          0
+vethb08c809:   14755     255    0    0    0     0          0         0   114584     768    0    e1    0     0       0         
+ 0
+59738367 kB
+VmallocUsed:      149204 kB
+VmallocChunk:          0 kB
+Percpu:          21 [Arc  37536 kB
+HardwareCorrupted:     0 kB
+Ano    0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+wlp15s0: 5676598120 4421473    0 4730    0     0          0         0 159749043  693255    0    0    0     0       0          0
+tailscale0: 5211673176  727258    0    0    0     0          0         0 88890840  670307    0    0    0     0       0          0
+br-5baf6bc35574:       0       0    0    0    0     0          0         0        0       0    0   45    0     0       0          0
+br-b08ff56e6e4f:       0       0    0    0    0     0          0         0        0       0    0   45    0     0       0          0
+br-bb58cc9fde4c:       0       0    0    0    0     0          0         0        0       0       0       0          0
+vethd581e80: 1603602   15191    0    0    0     0          0         0  3226171   25665    0    0    0     0       0          0
+vexth0a11c3d:    2644      18    0    0    0     0          0         0   108309     539    0    0    0     0       0          0
+vethb08c809:   14755     255    0    0    0     0          0         0   114584     768    0    e1    0     0       0         
+ 0
+59738367 kB
+VmallocUsed:      149204 kB
+VmallocChunk:          0 kB
+Percpu:          21 [Arc  37536 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:     83968 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+Unaccepted:            0 kB
+Balloon:               0 kB
+GPUActive:         32688 kB
+GPUReclaim:              0    3    0     0       0          0
+docker0:   97684     391    0    0      0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+HugetlbB5:     tlbB5:               0 kB
+DirectMap4k:      326392 kB
+DirectMap2M:     8644608 kB
+80]
+DirectMap1G:    25165824 kB

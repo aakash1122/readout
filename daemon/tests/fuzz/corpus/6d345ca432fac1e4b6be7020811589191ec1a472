@@ -1,0 +1,36 @@
+ytesbytes: 7938
+2121436 kB
+MemFree:         2094808 kB
+MemAvailable:   22226056 kB
+ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ      33554424 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:              3956 kB
+Writeback:            20 kB
+AnonPages:       61ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿallocChunk:          0 kB
+Perc:p  u          37536 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:     83968 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:   kB
+Inactive(file): 19225972 kB
+Unevictable:        3180 kB
+Mlocked:            3180 kB
+SwapTotal:      33554ÈÍËß”½õ¬wapFree:       33554424 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:              3956 kB
+Writeback:            20 kB
+AnonPages:       6152208 kB
+Mapped:          2293644 kB
+Shmem:            228052 kB
+KReclaimable:    1900838 kB
+Slab:            3161796 kB
+SReclaimable:    2388376 kB
+SUnreclaim:       773420 kB
+KernelStack:       46092 kB
+PageTables:       132532 kB
+SecPatesbytes: bytAe

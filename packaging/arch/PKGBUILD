@@ -1,0 +1,71 @@
+# Maintainer: aakash1122
+pkgbase=readout
+pkgname=(readout plasma-applet-readout gnome-shell-extension-readout)
+pkgver=0.1.0
+pkgrel=1
+pkgdesc='System monitor for the KDE Plasma and GNOME Shell panels'
+arch=(x86_64 aarch64)
+url='https://github.com/aakash1122/readout'
+license=(MIT)
+makedepends=(cmake ninja python gtest dbus hwdata systemd
+             extra-cmake-modules qt6-base qt6-declarative ki18n kcoreaddons kconfig libplasma
+             glib2 gettext)
+source=("$pkgbase-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz")
+sha256sums=('SKIP')
+
+build() {
+  cmake -S "$pkgbase-$pkgver" -B build -G Ninja \
+    -DCMAKE_BUILD_TYPE=None \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_INSTALL_LIBEXECDIR=lib/readout
+  cmake --build build
+}
+
+check() {
+  ctest --test-dir build --output-on-failure
+}
+
+_install_parts() {
+  DESTDIR="$srcdir/staging" cmake --install build
+}
+
+package_readout() {
+  pkgdesc='Session service and CLI that read system statistics for the Readout widgets'
+  depends=(systemd-libs hwdata gcc-libs glibc hicolor-icon-theme)
+  optdepends=('networkmanager: Wi-Fi details'
+              'upower: battery information'
+              'bluez: Bluetooth devices'
+              'udisks2: SMART health'
+              'nvidia-utils: NVIDIA GPU data')
+  [[ -d "$srcdir/staging" ]] || _install_parts
+  cd "$srcdir/staging"
+  install -Dm755 usr/bin/readoutctl -t "$pkgdir/usr/bin"
+  install -Dm755 usr/lib/readout/readoutd -t "$pkgdir/usr/lib/readout"
+  install -Dm644 usr/lib/systemd/user/readoutd.service -t "$pkgdir/usr/lib/systemd/user"
+  install -Dm644 usr/share/dbus-1/services/io.github.aakash1122.Readout1.service -t "$pkgdir/usr/share/dbus-1/services"
+  install -Dm644 usr/share/dbus-1/interfaces/io.github.aakash1122.Readout1.xml -t "$pkgdir/usr/share/dbus-1/interfaces"
+  install -Dm644 usr/share/icons/hicolor/scalable/apps/io.github.aakash1122.readout.svg -t "$pkgdir/usr/share/icons/hicolor/scalable/apps"
+  install -Dm644 usr/share/icons/hicolor/symbolic/apps/io.github.aakash1122.readout-symbolic.svg -t "$pkgdir/usr/share/icons/hicolor/symbolic/apps"
+  install -Dm644 "$srcdir/$pkgbase-$pkgver/LICENSE" -t "$pkgdir/usr/share/licenses/$pkgname"
+}
+
+package_plasma-applet-readout() {
+  pkgdesc='Readout system monitor widget for KDE Plasma'
+  depends=(readout libplasma kquickcharts kirigami knotifications ki18n kconfig kcoreaddons qt6-base qt6-declarative)
+  [[ -d "$srcdir/staging" ]] || _install_parts
+  cd "$srcdir/staging"
+  install -Dm755 usr/lib/qt6/plugins/plasma/applets/io.github.aakash1122.readout.so -t "$pkgdir/usr/lib/qt6/plugins/plasma/applets"
+  install -Dm644 usr/share/knotifications6/readout.notifyrc -t "$pkgdir/usr/share/knotifications6"
+  install -Dm644 "$srcdir/$pkgbase-$pkgver/LICENSE" -t "$pkgdir/usr/share/licenses/$pkgname"
+}
+
+package_gnome-shell-extension-readout() {
+  pkgdesc='Readout system monitor for GNOME Shell'
+  arch=(any)
+  depends=(readout 'gnome-shell>=48')
+  [[ -d "$srcdir/staging" ]] || _install_parts
+  cd "$srcdir/staging"
+  install -dm755 "$pkgdir/usr/share/gnome-shell/extensions"
+  cp -r usr/share/gnome-shell/extensions/readout@aakash1122.github.io "$pkgdir/usr/share/gnome-shell/extensions/"
+  install -Dm644 "$srcdir/$pkgbase-$pkgver/LICENSE" -t "$pkgdir/usr/share/licenses/$pkgname"
+}

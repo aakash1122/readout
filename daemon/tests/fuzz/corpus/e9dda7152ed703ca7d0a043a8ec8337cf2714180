@@ -1,0 +1,61 @@
+4MemTo88888888888888888888888888888888888888
+GPUActive:        ize	: 1024 KB
+physical ]id	: 0
+siblings	: 24
+core id		: 0
+cpu`cores	: 12
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_eÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿxception	: yes
+cpuid level	: 16
+wp		: yes
+flags	888888888888888888888888888888888888
+GPUActive:        ize	: 1024 KB
+physical ]id	: 0
+siblings	: 24
+core id		: 0
+cpu`cores	: 12
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_eÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿxception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat  4730    0     0 å         0         0 159749043  693255    0   2   
+br-40d5a7f9a594:       0 4035
+cpu MHz		: 3023.754
+cache size	:g60=0.00 avg300=00=0zitn
+	e20b  Battlemage 
+	e20b  Battlemtn
+	ettledicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpÿÿÿ/u vme de pse tsrw
+27 52 0:34 / /proc/sys/fs/binfmt_misc rw,relatime shared:15ze:       2048 kB
+Huge
+SwapCached:            0 kB
+Active:      "   6739572 kB
+Inactive:       19323776 kB
+Active(anon):    628	: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat  4730    0     0 å         0         0 159749043  693255    0   2   
+br-40d5a7f9a594:       0 4035
+cpu MHz		: 3023.754
+cache size	:g60=0.00 avg300=00=0zitn
+	e20b  Battlemage 
+	e20b  Battlemtn
+	ettledicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpÿÿÿ/u vme de pse tsrw
+27 52 0:34 / /proc/sys/fs/binfmt_misc rw,relatime shared:15ze:       2048 kB
+Huge
+SwapCached:            0 kB
+Active:      "   6739572 kB
+Inactive:       19323776 kB
+Active(anon):    628

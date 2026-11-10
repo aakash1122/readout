@@ -1,0 +1,10 @@
+{
+  "uuid": "readout@aakash1122.github.io",
+  "name": "Readout",
+  "description": "System monitor for the top bar: CPU, memory, disk, network, GPU, sensors, battery, Bluetooth and clocks, with detailed popups.\n\nRequires the readoutd system service, installed from your distribution's \"readout\" package.\n\nThe only network request is the public IP lookup (api.ipify.org), and only when you click \"Show\" in the network popup.",
+  "shell-version": ["48", "49", "50"],
+  "url": "https://github.com/aakash1122/readout",
+  "settings-schema": "org.gnome.shell.extensions.readout",
+  "gettext-domain": "readout",
+  "version-name": "0.1.0"
+}

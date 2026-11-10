@@ -1,0 +1,9 @@
+1234ÿÿÿÿÿÿ!ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ560 10
+8Inter-|   Receive                                                |  Tra‰smit
+ face |bytes    packets errs drop fifo frame compressed multicBalloones    packets errs drop fifo colls carrier compressed
+    lo:  782072    7491    0    0    0     0          1         0   782072    7491    0    0    0     0       0          0
+enp14s0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+wlp15s0: 5676598120 4421473    0 4730    0     0          0         0 159749043  693255    0    0    0     0       0          0
+tailscale0: 5211673176  727258    0    0    0     0          0         0 88890840  670307    0    0    0     0       0          0
+br-5baf6bc35574:       0      ßÏ    0    0    0     0          0         0        0       00    0     0          0         0   108309     539    0    0    0     0       0          0
+v 1ethb08c809:   14755     255    0    0    0     0          0         0   114584     768    0    0    0     0       0          0

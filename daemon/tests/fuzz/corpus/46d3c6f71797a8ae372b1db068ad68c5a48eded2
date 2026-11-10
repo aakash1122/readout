@@ -1,0 +1,35 @@
+43 1 0:35 /root / rw,relatime shared:1 - btrfs /dev/nvme0n1p3 rw,seclabel,compress=zstd:1,ssd,discard=async,space_cache=v2,subvolid=256,subvol=/root
+40 43 0:7 / /dev rw,nosuid shared:2 - devtmpfs devtmpfs rw,seclabel,size=15964684k,nr_inodes=3991171,mode=755,inode64
+42 40 0:27 / /dev/shm rw,nosuid,nodev shared:3 - tmpfs tmpfs rw,seclabel,inode64,usrquota
+44 40 0:28 / /dev/pts rw,nosuid,noexec,relatime shared:4 - devpts devpts rw,seclabel,gid=5,mode=600,ptmxmode=000
+45 43 0:26 / /sys rw,nosuid,nodev,noexec,relatime shared:5 - sysfs sysfs rw,seclabel
+46 45 0:8 / /sys/kernel/security rw,nosuid,nodev,noexec,relatime shared:6 - securityfs securityfs rw
+47 45 0:30 / /sys/fs/cgroup rw,nosuid,nodev,noexec,relatime shared:7 - cgroup2 cgroup2 rw,seclabel,nsdelegate,memory_recursiveprot,memory_hugetlb_accounting
+48 45 0:31 / /sys/fs/pstore rw,nowuid,nodev,noexec,relatime shared:8 - pstore none rw,seclabel
+49 45 0:32 / /sys/firmware/efi/efivars rw,nosuid,nodev,noexec,relatime shared:9 - efivarfs efivarfs rw
+50 45 0:33 / /sys/fs/bpf rw,nosuid,nodev,noexec,relatime shared:10 - bpf bpf rw,mode=700
+51 45 0:20 / /sys/kernel/config rw,nosuid,nodev,noexec,relatime shared:11 - configfs configfs rw
+52 43 0:25 / /proc rw,nosuid,noapshotter.v1.overlayfs/snapshots/14582/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/11934/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/6013/fs,upperdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/14583/fs,workdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/14583/work
+1013 43 0:87 / /var/lib/docker/rootfs/overlayfs/ac03d0e2c217ea03623b9eef4a08c2953eb589e4f8d00364cad948cba3bc6ba8 rw,relatime shared:976 - overlay overlay rw,seclabel,lowerdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/14574/fs:/var/lib/conkainerd/io.containerd.snapshotter.v1.overlayfs/snapshots/11936/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/11933/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/6013/fs,upperdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/14580/fs,workdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/14580/work
+1076 43 0:91 / /var/lib/docker/rootfs/overlayfs/a71c64118c82f2ff1dbf60069668a969cbe8541fec105595ec0bfa7bf72b97b6 rw,relatime shared:999 - overlay overlay rw,seclabel,lowerdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1350/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/11/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/10/fs:/var/lib/containerd/io.contaib/conkainerd/io.containerd.snapshotter.v1.overlayfs/snapshots/11936/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/11933/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/6013/fs,upperdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/14580/fs,workdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/14580/work
+1076 43 0:91 / /var/lib/docker/rootfs/overlayfs/a71c64118c82f2ff1dbf60069668a969cbe8541fec105595ec0bfa7bf72b97b6 rw,relatime shared:999 - overlay overlay rw,seclabel,lowerdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1350/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/11/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/10/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/9/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/8/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/7/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/6/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/5/fs,upperdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1351/fs,workdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1351/work
+1078 43 0:90 / /var/lib/docker/rootfs/overlayfs/a5818d20cf39faaf8589cb0fb09bff7e36313c0fe9cb0675837c5186ed4ac905 rw,relatime shared:1022 - overlay overlay rw,seclabel,lowerdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/14758/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/11942/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/ainerd.snapshotter.v1.overlayfs/snapshots/1351/fs,workdir=/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/1351/work
+1078 43 0:90 / /var/lib/docker/rootfs/overlayfs/a5818d20cf39faaf8589cb0fb09bff7e36313c0fe9cb0675837c5186ed4ac905 rw,relatime shared:1022 - overlay overlay rw,seclabel,lowerdir=/var/libtmpfs rw,seclabel,size=15964684k,nr_inodes=3991171,mode=755,inode64
+42 40 0:27 / /dev/shm rw,nosuid,nodev shared:3 - tmpfs tmpfs rw,seclabel,inode64,usrquota
+44 40 0:28 / /dev/pts rw,nosuid,noexec,relatime shared:4 - devpts devpts rw,seclabel,gid=5,mode=600,ptmxmode=000
+45 43 0:26 / /sys rw,nosuid,nodev,noexec,relatime shared:5 - sysfs sysfs rw,seclabel
+46 45 0:8 / /sys/kernel/security rw,nosuid,nodev,noexec,relatime shared:6 - securityfs securityfs rw
+47 45 0:30 / /sys/fs/cgroup rw,nosuid,nodev,noexec,relatime shared:7 - cgroup2 cgroup2 rw,seclabel,nsdelegate,memory_recursiveprot,memory_hugetlb_accounting
+48 45 0:31 / /sys/fs/pstore rw,nosuid,nodev,noexec,relatime shared:8 - pstore none rw,seclabel
+49 45 0:32 / /sys/firmware/efi/efivars rw,nosuid,nodev,noexec,relatime shared:9 - efivarfs efivarfs rw
+50 45 0:33 / /sys/fs/bpf rw,nosuid,nodev,noexec,relatime shared:10 - bpf bpf rw,mode=700
+51 45 0:20 / /sys/kernel/config rw,nosuid,nodev,noexec,relatime shared:11 - configfs configfs rw
+52 43 0:25 / /proc rw,nosuid,nodev,noexec,relatime shared:13 - proc proc rw
+53 43 0:29 / /run rw,nosuid,nodev shared:14 - tmpfs tmpfs rw,seclabel,size=6424288k,nr_inodes=819200,mode=755,inode64
+28 45 0:23 / /sys/fs/selinux rw,nosuid,noexec,relatime shared:12 - selinuxfs selinuxfs rw
+27 52 0:34 / /proc/sys/fs/binfmt_misc rw,relatime shared:15 - autofs systemd-1 rw,fd=41,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=27884
+31 53 0:40 / /run/credentials/systemd-journald.service rw,nosuid,nodev,noexec,relatime,nosymfollow shared:16 - tmpfs none ro,seclabel,size=1024k,nr_inodes=1024,mode=700,inode64,noswap
+35 45 0:14 / /sys/kernel/tracing rw,nosuid,nodev,noexec,relatime shared:19 - tracefs tracefs rw,seclabel
+36 40 0:22 / /dev/mqueue rw,nosuid,nodev,noexec,relatime shared:20 - mqueue mqueue rw,seclabel
+37 45 0:43 / /sys/fs/fuse/connections rw,nosuid,nodev,noexec,relatime shared:22 - fusectl fusectl rw
+39 40 0:42 / /dev/binderfs rw,relatime stainerd/io.containerd.snapshotter.v1.overlayfs/snapshots/14557/fs:/var/lib/containerd/io.containerd.snapshotter.v1.over

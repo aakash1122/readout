@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile name=""/>
+
+  <group name="General">
+    <entry name="modules" type="StringList">
+      <default>cpu</default>
+    </entry>
+    <!-- "module=style" pairs; a module without an entry uses its default style -->
+    <entry name="styles" type="StringList">
+      <default></default>
+    </entry>
+    <entry name="showLabel" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="showIcon" type="Bool">
+      <default>false</default>
+    </entry>
+    <!-- accent, thresholds, monochrome -->
+    <entry name="colorMode" type="String">
+      <default>accent</default>
+    </entry>
+    <entry name="warningThreshold" type="Int">
+      <default>70</default>
+      <min>1</min>
+      <max>100</max>
+    </entry>
+    <entry name="criticalThreshold" type="Int">
+      <default>90</default>
+      <min>1</min>
+      <max>100</max>
+    </entry>
+    <entry name="processCount" type="Int">
+      <default>8</default>
+      <min>0</min>
+      <max>10</max>
+    </entry>
+    <!-- Sensor ids shown by the sensors item; empty means the CPU and GPU temperature -->
+    <entry name="sensors" type="StringList">
+      <default></default>
+    </entry>
+    <!-- PCI slot of the GPU to show; empty means the first non-secondary GPU -->
+    <entry name="gpu" type="String">
+      <default></default>
+    </entry>
+    <entry name="speedBits" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="timeZones" type="StringList">
+      <default></default>
+    </entry>
+    <!-- locale, 24, 12 -->
+    <entry name="hourFormat" type="String">
+      <default>locale</default>
+    </entry>
+    <entry name="showSeconds" type="Bool">
+      <default>false</default>
+    </entry>
+  </group>
+
+  <!-- Internal state, not shown in the settings. -->
+  <group name="State">
+    <!-- JSON object: popup view ("cpu", ..., or "overview") to its last full height in pixels,
+         so the popup opens at that height instead of growing when detail data arrives. -->
+    <entry name="popupHeights" type="String">
+      <default>{}</default>
+    </entry>
+  </group>
+
+  <group name="Alerts">
+    <entry name="alertCpuUsage" type="Bool"><default>false</default></entry>
+    <entry name="alertCpuUsageThreshold" type="Int"><default>90</default><min>1</min><max>100</max></entry>
+    <entry name="alertMemoryUsage" type="Bool"><default>false</default></entry>
+    <entry name="alertMemoryUsageThreshold" type="Int"><default>90</default><min>1</min><max>100</max></entry>
+    <entry name="alertCpuTemperature" type="Bool"><default>false</default></entry>
+    <entry name="alertCpuTemperatureThreshold" type="Int"><default>90</default><min>30</min><max>120</max></entry>
+    <entry name="alertGpuTemperature" type="Bool"><default>false</default></entry>
+    <entry name="alertGpuTemperatureThreshold" type="Int"><default>90</default><min>30</min><max>120</max></entry>
+    <entry name="alertDiskFree" type="Bool"><default>false</default></entry>
+    <entry name="alertDiskFreeThreshold" type="Int"><default>10</default><min>1</min><max>99</max></entry>
+    <entry name="alertBatteryLow" type="Bool"><default>false</default></entry>
+    <entry name="alertBatteryLowThreshold" type="Int"><default>20</default><min>1</min><max>99</max></entry>
+    <entry name="alertBatteryCharged" type="Bool"><default>false</default></entry>
+    <entry name="alertBatteryChargedThreshold" type="Int"><default>80</default><min>1</min><max>100</max></entry>
+    <entry name="alertConnectivity" type="Bool"><default>false</default></entry>
+  </group>
+</kcfg>

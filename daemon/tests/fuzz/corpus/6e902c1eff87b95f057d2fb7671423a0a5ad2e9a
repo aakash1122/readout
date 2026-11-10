@@ -1,0 +1,20 @@
+Inter-|   Receive             ulticast|bytes    packets errs drop fifo colls carrie   0    0   45    0     0       0          0
+vethf7335dd: 3112455   24894    0    0    0     43 1 0:35 /root / rw,relatime shared:1 - btrfs /dev/nvme0n1p3 rw,seclabel,compress=zstd:1,ssd,discard=async,space_cache=v2,subvolid=256,subvol=/root
+40 43 0:7 / /dev rw,nosuid shared:2 - devtmpfs devtmpfs rw,seclabel,size=15964684k,nr_inodes=3991171,mode=755,inode64
+42 40 0:27 / /dev/shm rw,nosuid,nodev shared:3 - tmpfs tmpfs rw,seclabel,inode64,usrquota
+44 40 0:28 / /dev/pts rw,nosuid,noexec,relatime shared:4 - devpts devpts rw,seclabel,gid=5,mode=600,ptmxmode=000
+45 43 0:26 / /sys rw,nosuid,nodev,noexec,relatime shared:5 - sysfs sysfs rw,seclabel
+46 45 0:8 / /sys/kernel/security rw,nosuid,nodev,noexec,relatime shared:6 - securityfs securityfs rw
+47 45 0:30 / /sys/fs/cgroup rw,nosuid,nodev,noexec,relatime shared:7 - cgroup2 cgroup2 rw,seclabel,nsdelegate,memory_recursiveprot,memory_hugetlb_accounting
+48 45 0:31 / /sys/fs/pstore rw,nosuid,nodev,noexec,relatime shared:8 - pstore none rw,seclabel
+49 45 0:32 / /sys/firmware/efi/efivars rw,nosuid,nodev,noexec,relatime shared:9 0          0
+vethce574b3:  103158     391    0    0    0     0          0         0   225382     805    0    0    0     0       0          0
+veth6538853:   32040     130    0    0    0     0          0         0   163301   0    0    0     0       0   packets errs drop fifo colls carrier compressed
+    lo‹:  782072    7491    0    0    0     0          1         0   782072    7491    0    0    0     0    0       0          0
+br-5baf6bc355r compressed
+    lRo:  782072    7491    0    0    0     0          1         0   782072    7491    0    0    0     0       0    fs rw
+50 45 0:33 / /sys/fs/bpf rw,nosuid,nodev,noexec,relatime shared:10 - bpf bpf rw,mode=700
+51 45 0:20 / /sys/kernelnfigfs configfs rw
+52 43 0:25 / /proc rw,nosuid,nodev,noexec,relatime shared:13 - proc proc rw
+53 43 0:29 / /run rw,nosuid,nodev shared:      0
+enp14s0:       0     14 - tmpfs tmpfs rw,seclabe l,size=6

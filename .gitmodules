@@ -1,0 +1,3 @@
+[submodule "reference/stats-macos"]
+	path = reference/stats-macos
+	url = https://github.com/exelban/stats.git

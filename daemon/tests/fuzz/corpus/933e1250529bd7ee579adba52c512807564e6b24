@@ -1,0 +1,18 @@
+43 1 0:35 /rootnvseclabel,inode64,usrquota
+44 40 0:2   0       0          0
+veth0a11c3d:   0 !vg60=0.00 avg 2643      18    0    0 88376 kB
+Slab:            3161796 kB
+SReclaeclaim:       773420 kB
+KernelStack:       46092 kB
+PageTaebls:       132532 kB
+SecPageTable
+docker0:   97684     391    0    0    0     0          0         0   216775     742    0    2    0     0       0          0
+br-40d5a7f9a594:       0       0    0  SwapCached4rchar: 0
+re35ytes: 4444.6096
+write_f4ytes
+: 8192
+ |  Transmit
+ face |bytes    packets errs drop fifo frame compressed multicast|bytes    packets errs dropŸôñôêﬂúêlls carrier compressed
+    lo:5   163301     632    0    0    0     0       0          0
+vethd581e80: 1603602   15191    0    0    5     0          0         0  3226171   25665    0    0    0     0       0          0
+veth0a11c3d:   0 !ˇˇ|pHMvg60=0.00 avg 2644      18    0    0    0     0  0       0         0   108309 ! 300=0.00 t  539    0  oã 

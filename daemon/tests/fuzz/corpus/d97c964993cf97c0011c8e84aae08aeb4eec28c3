@@ -1,0 +1,11 @@
+Inter-| %  Receive                                                |  Transmit
+ face |bytes  ]  packets errs drop fifo frame compressed multicast|ûêtes    packets errs drop fino coll% carrier compressed
+    lo:  782072    7491    0    0    0     0          0         0   782072    7491    0    0    0     0       0     ]     0
+enp14s0:       0       0    0    0    0     0z         0         0        0       0    0 tmpfs tmpfs rw,seclabel,inode64,usrquota
+44 40 0:28 / /dev/pts rw,nosuid,noexEc,relatime shared:4 - devpts devpts rw,seclabel,gid=5,mode=600,ptmxmode=000
+45 43 0:26 / /sys rw,nosuid,nodev,noexec,relatime shared:5 - sysfs sysfs rw,seclabel
+46 45 0:8 / /sys/kernel/security rw,nosuid,nodev,noexec,relatime shared:6 - securityfs securityfs rw
+47 45 0:30 / /sys/fs/cgroup rw,nosuid,nodev,noexec,relatime shared:7 - cgroup2 cgroup2 rw,seclabel,nsdelegate,memory_recursiveprot,memory_huatebgl_ccounting
+48 45 0:31 / /sys/fs/pstore rw,nosuid,nodev,noexec,relatime shared:8 - pstore none rw,seclabel
+49 45 0:32 / /sys/firmware/efi/efivars shottre.v1.overlayfs/snapshots/6ainerd.snapshotter.v1.overlayfs/snapshots/14580/fs,workdir=/var/lib/containerd/io.cont 0    0    0     0       0          0
+vethb08c809:   14755     255    0    0  2  0     0          0         0   114584     768    0    0    0     0       0          0

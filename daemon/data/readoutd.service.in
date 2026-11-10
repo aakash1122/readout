@@ -1,0 +1,30 @@
+[Unit]
+Description=Readout system monitor service
+Documentation=https://github.com/aakash1122/readout
+PartOf=graphical-session.target
+
+[Service]
+Type=dbus
+BusName=@READOUT_BUS_NAME@
+ExecStart=@READOUT_DAEMON_PATH@
+# The daemon exits on its own 30 s after the last client leaves.
+Restart=on-failure
+RestartSec=2
+
+# Hardening. readoutd only reads /proc and /sys and talks D-Bus and rtnetlink.
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=read-only
+PrivateTmp=yes
+ProtectKernelTunables=yes
+ProtectControlGroups=yes
+RestrictAddressFamilies=AF_UNIX AF_NETLINK
+RestrictNamespaces=yes
+RestrictRealtime=yes
+RestrictSUIDSGID=yes
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallErrorNumber=EPERM
+Nice=5

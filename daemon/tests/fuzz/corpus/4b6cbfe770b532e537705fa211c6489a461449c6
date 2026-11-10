@@ -1,0 +1,60 @@
+Inter-|   Receive                                                |  Transmit
+ face |bytes    packets errs drop fifo frame compressed multicast|bytes    packets errs drop fifo colls carrier compressed
+    lo:  782072    7491    0    0    0     0          1         0   782072    7491    0    0    0     0       0          0
+enp14s0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+wlp15s0: 5676598120 4421473    0 4730    0     0          0         0 159749043  693255    0    0    0     0      `0          0
+tailscale0: 5211673176  727258    0    0    0     0          0         0 88890840  670307    0    0    0     0       0          0
+br-5baf6bc35574:       0       0    0    0    0     0          0         0        0       0    0   45    0     0       0          0
+br-b08ff56e6e4f:       0       0    0    0    0     0          0         0        0       0    0   45    0     0       0          0
+br-bb58cc9fde4c:       0       0    0    0    0     0          0         0        0       0    0   45    0     0       0          0
+br-f8feddcf625b:       0       0    0    0    0     0          0         0        0       0    0   45    0     0       0          0
+br-00514dd8c229:   32920     159    0    0    0     0          0         0   163382     574    0    3    0     0       0          0
+docker0:   97684     391    0    0    0     0          0         0   216775     742    0    2    0     0       0          0
+br-4594:       0       0    0    0    0     0          0         0        0       0    0   45    0     0       0          0
+vethf7335dd: 3112455   24894    0    0    0     0          0         0  1687503   15467     0    0     0       0          0
+tailscale0: 5211673176  727258    0    0    0     0          0         0 88890840  670307    0    0    0     0       0          0
+br-5baf6bc35574:       0       0    0    0    0     0          0     M   0        0       0    0   45    0     0       0          0
+br-b08ff56e6e4f:       0       0    0    0    0     0          0         0        0       0    0   45    0     0       0          0
+br-bb58cc9fde4c:       0       0    0    0    0     0          0         0        0       0    0   45    0     0       0          0
+br-f8feddcf625b:       0       0    0    0    0     0          0         0        0       0    0   45    0     0       0          0
+br-00514dd8c229:   32920     159    0    0    0     0          0         0   163382     574    0    3    0     0       0          0
+docker0:   97684     391    0    0    0     0          0         0   216775     742    0    2    0     0       0          0
+br-40d5a7f9a594:       0       0    0    0    0     0          0         0        0       0    0   45    0     0       0          0
+vethf7335dd: 3112455   24894    0    0    0     0          0         0  1687503   15467    0    0    0     0       0          0
+vethce574b3:  103158     391    0    0    0     0          0         0   225382     805    0    0    0     0       0          0
+veth6538853:   32040     130    0    0    0     0          0         0   163301   0    0    0     0       0          0
+vethce574b3:  103158     391    0    0    0     0          0         0ed multicast|bytes    packets errs drop fifo colls carrier compressed
+    lo:  782072    7491    0    0    0     0          1         0   782072    7491    0    0    0     0       0          0
+enp14s0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+wlp15s0: 5676598120 4421473    0 4730    0     0          0         0 159749043  693255    0    0    0     0       0          0
+tailscale0: 5211673176  727258    0    0    0     0          0         0 88890840  670307    0    0    0     0       0          0
+br-5baf6bc35574:       0       0    0    0    0     0          0         0        0       0    0   45    0     0       0          0
+br-b08ff56e6e4f:       0       0    0    0    0     0          0         0        0       0    0   45    0     0       0          0
+br-bb58cc9fde4c:       0       0    0    0    0     0          0         0        0       0    0   45    0     0       0          0
+br-f8feddcf625b:       0       0    0    0    0     0          0         0        0       0    0   45    0     0       0          0
+br-00514dd8c229:   32920     159    0    0    0     0          0         0   163382     574    0    3    0     0       0          0
+docker0:   97684     391    0    0    0     0          0         0   216775     742    0    2    0     0       0          0
+br-4594:       0       0    0    0    0     0          0         0        0       0    0   45    0     0       0          0
+vethf7335dd: 3112455   24894    0    0    0     0          0         0  1687503   15467     0    0     0       0          0
+tailscale0: 5211673176  727258    0    0    0     0          0         0 88890840  670307    0    0    0     0       0          0
+br-5baf6bc35574:       0       0    0    0    0     0          0     M   0        0       0    0   45    0     0       0          0
+br-b08ff56e6e4f:       0       0    0    0    0     0          0         0        0       0    0   45    0     0       0          0
+br-bb58cc9fde4c:       0       0    0    0    0     0          0         0        0       0    0   45    0     0       0          0
+br-f8feddcf625b:       0       0    0    0    0     0          0         0         225382     805    0    0    0     0       0          0
+veth6538853:   32040     130    0    0    0     0          0         0   163301     632    0    0    0     0       0          0
+vethd581e43 1 0:35 /root / rw,relatime shared:1 - btrfs /dev/nvme0n1p3 rw,seclabel,compress=zstd:1,ssd,discard=async,space_cache=v2,subvolid=256,subvol=/root
+40 43 0:7 / /dev rw,nosuid shared:2 - devtmpfs devtmpfs rw,seclabel,size=15964684k,nr_inodes=3991171,mode=755,inode64
+42 40 0:27 / /dev/shm rw,nosuid,nodev shared:3 - tmpfs tmpfs rw,seclabel,inohots/14758/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/11942/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/11941/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/11940/fs:/var/lib/containerd/io.containerd.snapshotter.v1.overlayfs/snapshots/11939/fs:/var/lib/containerd/io.conta/dev rw,nosuid shared:2 - devtmpfs devtmpfs rw,seclabel,size=15964684k,nr_inodes=3991171,mode=755,inode64
+42 40 0:27 / /dev/shm rw,nosuid,nodev shared:3 - tmpfs tmpfs rw,seclabel,inode64,usrquota
+44 40 0:28 / /dev/pts rw,nosuid,noexec,relatime shared:4 - devpts devpts rw,seclabel,gid=5,mode=600,ptmxmode=000
+45 43 0:26 / /sys rw,nosuid,nodev,noexec,relatime shared:5 - sysfs sysfs rw,seclabel
+46 45 0:8 / /syde64,usrquota
+44 40 0:28 / /dev/pts rw,nosuid,noexec,relatime shared:4 - devpts devpts rw,seclabel,gid=5,mode=600,ptmxmode=000
+45 43 0:26 / /sys rw,nosuid,nodev,noexec,relatime shared:5 - sysfs sysfs rw,seclabel
+46 45 0:8 / /sys/kernel/security rw,nosuid,nodev,noexec,relatime shared:6 - securityfs securityfs rw
+47 45 0:30 / /sys/fs/cgroup rw,nosuid,nodev,noexec,relatime shared:7 - cgroup2 cgroup2 rw,seclabel,nsdelegate,memory_recursiveprot,memory_hugetlb_accounting
+48 45 0:31 / /sys/fs/pstore rw,nosuid,nodev,noexec,relatime shared:8 - pstore none rw,seclabel
+49 45 0:32 / /sys/firmware/efi/efivars rw,nosuid,nodev,noexec,relatime shared:9 - efivarfs efivarfs rw
+50 45 0:33 / /sys/fs/bpf rw,nosuid,nodev,noexec,relatime shared:10 - bpf bpf rw,mode=700
+51 45 0:20 / /sys/kernel/config rw,nosuid,nodev,noexec,relatime shared:11 - configfs configfs rw
+52 43 0:25 / /proc rw,nosuid,noapshotter.v1.overlayfs/snapshots/14582/fs:/var/lib/containerd/io.containerd.snapsh80: 1603602   15otter.v1.overlayfs/s1

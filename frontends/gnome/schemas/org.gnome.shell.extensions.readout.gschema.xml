@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="readout">
+  <schema id="org.gnome.shell.extensions.readout" path="/org/gnome/shell/extensions/readout/">
+    <key name="items" type="s">
+      <default>'[{"modules":["cpu"],"styles":{"cpu":"mini"}},{"modules":["memory"],"styles":{"memory":"mini"}},{"modules":["network"],"styles":{"network":"speed"}}]'</default>
+      <summary>Panel items</summary>
+      <description>JSON list of panel items. Each item has "modules" (one or more for a combined item), "styles" (module to widget style) and display options; missing options use the defaults (color mode "accent", 8 processes, warning 70 and critical 90). Edit it in the preferences window.</description>
+    </key>
+    <key name="update-interval" type="u">
+      <range min="1" max="10"/>
+      <default>2</default>
+      <summary>Update interval in seconds</summary>
+    </key>
+    <key name="panel-box" type="s">
+      <choices>
+        <choice value="left"/>
+        <choice value="center"/>
+        <choice value="right"/>
+      </choices>
+      <default>'right'</default>
+      <summary>Panel area</summary>
+    </key>
+    <key name="popup-text-scale" type="u">
+      <range min="80" max="130"/>
+      <default>100</default>
+      <summary>Popup text size in percent</summary>
+      <description>Scales the text and everything drawn in the popups.</description>
+    </key>
+    <key name="popup-spacing" type="s">
+      <choices>
+        <choice value="compact"/>
+        <choice value="normal"/>
+        <choice value="comfortable"/>
+      </choices>
+      <default>'normal'</default>
+      <summary>Popup row spacing</summary>
+    </key>
+    <key name="popup-margin" type="u">
+      <range min="0" max="16"/>
+      <default>8</default>
+      <summary>Popup margins in points</summary>
+    </key>
+    <key name="popup-heights" type="a{su}">
+      <default>{}</default>
+      <summary>Last popup page heights</summary>
+      <description>Internal: the last full height of each popup page ("readout-N/module" to px), so a popup opens at that height instead of growing when its detail data arrives.</description>
+    </key>
+    <key name="popup-width" type="s">
+      <choices>
+        <choice value="narrow"/>
+        <choice value="normal"/>
+        <choice value="wide"/>
+      </choices>
+      <default>'normal'</default>
+      <summary>Popup width</summary>
+    </key>
+
+    <key name="alert-cpu-enabled" type="b"><default>false</default><summary>Alert on high CPU usage</summary></key>
+    <key name="alert-cpu-threshold" type="d"><range min="1" max="100"/><default>90</default><summary>CPU usage alert threshold (percent)</summary></key>
+    <key name="alert-memory-enabled" type="b"><default>false</default><summary>Alert on high memory usage</summary></key>
+    <key name="alert-memory-threshold" type="d"><range min="1" max="100"/><default>90</default><summary>Memory usage alert threshold (percent)</summary></key>
+    <key name="alert-cpu-temperature-enabled" type="b"><default>false</default><summary>Alert on high CPU temperature</summary></key>
+    <key name="alert-cpu-temperature-threshold" type="d"><range min="30" max="120"/><default>90</default><summary>CPU temperature alert threshold (°C)</summary></key>
+    <key name="alert-gpu-temperature-enabled" type="b"><default>false</default><summary>Alert on high GPU temperature</summary></key>
+    <key name="alert-gpu-temperature-threshold" type="d"><range min="30" max="120"/><default>90</default><summary>GPU temperature alert threshold (°C)</summary></key>
+    <key name="alert-disk-free-enabled" type="b"><default>false</default><summary>Alert on low disk space</summary></key>
+    <key name="alert-disk-free-threshold" type="d"><range min="1" max="50"/><default>10</default><summary>Free disk space alert threshold (percent)</summary></key>
+    <key name="alert-battery-low-enabled" type="b"><default>false</default><summary>Alert on low battery</summary></key>
+    <key name="alert-battery-low-threshold" type="d"><range min="1" max="100"/><default>20</default><summary>Low battery alert threshold (percent)</summary></key>
+    <key name="alert-battery-charged-enabled" type="b"><default>false</default><summary>Alert when the battery is charged</summary></key>
+    <key name="alert-battery-charged-threshold" type="d"><range min="1" max="100"/><default>80</default><summary>Charged battery alert threshold (percent)</summary></key>
+    <key name="alert-connectivity-enabled" type="b"><default>false</default><summary>Alert when the internet connection is lost</summary></key>
+  </schema>
+</schemalist>

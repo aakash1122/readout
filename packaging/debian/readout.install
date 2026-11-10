@@ -1,0 +1,7 @@
+usr/bin/readoutctl
+usr/libexec/readoutd
+usr/lib/systemd/user/readoutd.service
+usr/share/dbus-1/services/io.github.aakash1122.Readout1.service
+usr/share/dbus-1/interfaces/io.github.aakash1122.Readout1.xml
+usr/share/icons/hicolor/scalable/apps/io.github.aakash1122.readout.svg
+usr/share/icons/hicolor/symbolic/apps/io.github.aakash1122.readout-symbolic.svg

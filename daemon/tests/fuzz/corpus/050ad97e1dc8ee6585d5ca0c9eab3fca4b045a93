@@ -1,0 +1,2 @@
+43 1 0:35 /root / - btrfs /dev/nvme,00
+51 45 0:20 / /sys/kernel/config rw,nosuid,nodev,noexec,relatime shared:11 - confsys/fs/bpf rw,7osuid,nodev,noexec,relatime shared:슬슬슬슬슬슬슬� /sys/kernel/confshaps

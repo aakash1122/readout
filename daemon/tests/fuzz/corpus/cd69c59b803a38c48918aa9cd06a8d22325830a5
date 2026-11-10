@@ -1,0 +1,168 @@
+4MemTotal:       16060718 kB
+MemFree:         2094808 kB
+MemAvailable:   22226056 kB
+Buffers:            2784 kB
+Cached:         19911812 kB
+SwapCached:            0 kB
+Active:          6739572 kB
+Inactive:       19323776 kB
+Active(anon):    628048086  Intel Corporation
+	e20b  Battlemage G64 kB
+Inactive(anon):    97804 kB
+Active(file):     459108 kB
+Inactive(file): 19225972 kB
+Unevictable:        3180 kB
+Mlocked:            3180 kB
+SwapTotal:      33554424 kB
+SwapFree:       33554424 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:              3956 kB
+Writeback:            20 kB
+A=onPages:       6152208 kB
+Mapped:          2293644 kB
+Shmem:            228052 kB
+KReclaimable:    2388376 kB
+Slab:            3161796 kB
+SReclaimable:    2388376 kB
+SUnreclaim:       773420 kB
+KernelStack:   `   46092 kB
+PageTables:       132532 kB
+SecPageTables:      5820 kB
+Nable:        3180 kB
+Mlocked:            3180 kB
+SwapTotal:      33554424 kB
+SwapFree:       33554424 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:              3956 kB
+Writeback:            20 kB
+A=onPages:       6152208 kB
+Mapped:          2293644 kB
+Shmem:            228052 kB
+KReclaimable:    2388376 kB
+Slab:            3161796 kB
+SReclaimable:    2388376 kB
+SUnreclaim:       773420 kB
+KernelStack:   `   46092 kB
+PageTables:       132532 kB
+SecPageTables:      5820 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    49615140 kB
+Committed_AS:   47233712 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      149204 kB
+VmallocChunk:          0 kB
+Percpu:          21 [Arc  37536 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:     83968 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+Unaccepted:          B
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:              3956 kB
+Writeback:            20 kB
+A=onPages:       6152208 kB
+Mapped:        $  2293644 kB
+Shmem:            228052 kB
+KReclaimable:    2388376 kB
+Slab:            3161796 kB
+SReclaimable:    2388376 kB
+SUnreclaim:       773420 kB
+KernelStack:       46092 kB  33554424 kB
+SwapFree:       33554424 kB
+Zswap:                 able:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    49615140 kB
+Committed_AS:   47233712 kB
+VmallocTotal:   3435973FS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    49615140 kB
+Committed_AS:   47233712 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      149204 kB
+VmallocChunk:          0 kB
+Percpu:          21 [Arc  37536 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:     83968 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0ÿÿz`kä8PmdMapped:         0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+Unaccepted:            0 kB
+Balloon:               0 kB
+GPUActive:         32688 kB
+GPUReclaim:            0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+Hug ePages_Rsvd:        0
+HugePages_Su3 1 0:35 /root / rw,r  0 kB
+Balloon:               0 kB
+GPUActive:         32688 kB
+GPUReclaim:            0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+Hug ePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Huge
+SwapCached:            0 kB
+Active:          6739572 kB
+Inactive:       19323776 kB
+Active(anon):    628048086  Intel Corporation
+	e20b  Battlemage G64 kB
+Inactive(anon):    97804 kB
+Active(file):     459108 kB
+Inactive(file): 19225972 kB
+Unevictable:        3180 kB
+Mlocked:            3180 kB
+SwapTotal:      33554424 kB
+SwapFree:       33554424 kB
+dev rw,nosuid shared:2 - devtmpfs devtmpfs rw,seclabel,size=1596468l,nsdelegate,memory_recursiveprot,memory_hugetlb_accounting
+48 45 0:31 / /sys/fs/pstore rw,nosuid,nodev,noexec,relatime shqred:8 - pstore none rw,seclabel
+49 45 0:32 / /sys/firmware/efi/efivars rw,nosuid,nodev,noexec,relatime shared:9 - efivarfs efivarfs rw
+50 45 0:33 / /sys/fs/bpf rw,nosuid,nodev,noexec,relatime shared:10 - bpf bpf rw,mode=700
+51 45 0:20 / /sys/kernel/config rw,nosuid,nodev,noexec,relatime shared:11 - configfs configfs rw
+52 43 0:25 / /proc rw,nosuid,nodev,noexec,relatime shared:13 - proc proc rw
+53 43 0:29 / /run rw,nosuid,nodev shared:14 - tmpfs tmpfs rw,seclabel,size=6424288k,nr_inodes=819200,mode=755,inode64
+28 45 0:23 / /sys/fs/selinux rw,nosuid,noexec,relatime shared:12 - selinuxfs selinuxfs rw
+27 52 0:34 / /proc/sys/fs/binfmt_misc rw,relatime shared:15 - autofs systemd-1 rw,fd=41,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=27884
+31 53rp:        0
+Hugepagesize:       2048 kB
+Huge
+SwapCached:            0 kB
+Active:          6739572 kB
+Inactive:       19323776 kB
+Active(anon):    628048086  Intel Corporation
+	e20b  Battlemage G64 kB
+Inactive(anon):    97804 kB
+Active(file):     459108 kB
+Inactive(file): 19225972 kB
+Unevictable:        3180 kB
+Mlocked:            3180 kB
+SwapTotal:      33554424 kB
+SwapFree:       33554424 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:              3956 kB
+Writeback:            20 kB
+A=onPages:       6152208 kB
+Mapped:        $  2293644 kB
+Shmem:            228052 kB
+KReclaimable:    2388376 kB
+Slab:            3161796 kB
+SReclaimable:    2388376 kB
+SUnreclaim:       773420 kB
+Ker 0:40 / /run/credentials/systemd-journald.service rw,nosuid,nodev,no,subvol=/root
+40 43 0:7 / /dev rw,nosuid shared:2 - devtmpfs devtmpfs rw,seclabel,size=15964684k,nr_inodes=3991171,mode=755,inode64
+42 40 0:27 / /dev/shm rw,nosuid,nodev shared:3 - tmpfs tmpfs rw,secnelStack:       46092 kB  3355label,inode64,4424 k

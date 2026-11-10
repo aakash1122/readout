@@ -1,0 +1,624 @@
+/*
+ * Readout styles, following the Stats layout (docs/visual-spec.md).
+ * GNOME Shell loads stylesheet-dark.css or stylesheet-light.css to match the shell color scheme,
+ * and this file when the session has no color scheme. Both variants import this file;
+ * the light one overrides the few colors that differ, which default to dark here.
+ *
+ * Sizes are in em so everything follows the shell font: one Stats point is 1em / 13
+ * (visual-spec.md 6.1). For example the 264 pt content width is 20.31em and a 22 pt row 1.69em.
+ * Colors of text, labels and backgrounds come from the shell theme.
+ */
+
+/* ---- Panel ------------------------------------------------------------------------- */
+
+.readout-panel-box {
+  spacing: 0.4em;
+}
+
+.readout-module {
+  spacing: 2px;
+}
+
+.readout-icon {
+  icon-size: 1.09em;
+}
+
+.readout-caption {
+  font-size: 0.6em;
+  font-weight: 800;
+}
+
+.readout-value {
+  font-weight: bold;
+}
+
+.readout-tnum {
+  font-feature-settings: "tnum";
+}
+
+.readout-text-warning {
+  color: #ff8000;
+}
+
+.readout-text-critical {
+  color: #ff0000;
+}
+
+/* Canvases read one Stats point from this length. */
+.readout-canvas {
+  -readout-em: 1em;
+}
+
+/* ---- Popup frame ------------------------------------------------------------------- */
+
+.readout-menu {
+  padding: 0;
+}
+
+.readout-menu-content {
+  padding: 0 0.615em 0.615em 0.615em;
+}
+
+.readout-header {
+  height: 3.23em;
+}
+
+.readout-header-button {
+  width: 2.46em;
+  height: 3.23em;
+  border-radius: 0.46em;
+}
+
+.readout-icon-button {
+  color: #aaaaaa;
+}
+
+.readout-icon-button:hover,
+.readout-icon-button:focus {
+  color: inherit;
+}
+
+.readout-button-icon {
+  icon-size: 1.23em;
+}
+
+.readout-header-title {
+  font-size: 1.23em;
+  font-weight: normal;
+}
+
+.readout-scroll {
+  max-height: 40em;
+}
+
+.readout-scroll .vscrollbar {
+  margin-left: 0.46em;
+}
+
+.readout-status-message {
+  padding: 0.4em 0;
+  max-width: 20.31em;
+}
+
+.readout-page,
+.readout-overview {
+  width: 20.31em;
+}
+
+.readout-card-list {
+  spacing: 0.615em;
+}
+
+/*
+ * Popup look settings (docs/frontend-spec.md, "Popup look"). The text size and the margins
+ * are set inline on .readout-menu-content; width and spacing use these classes on it.
+ * Narrow is 236 pt and wide 320 pt. Compact scales row heights and gaps by 0.8 (the header too),
+ * comfortable by 1.25 (the header keeps its height).
+ */
+.readout-width-narrow .readout-page,
+.readout-width-narrow .readout-overview {
+  width: 18.15em;
+}
+
+.readout-width-narrow .readout-status-message {
+  max-width: 18.15em;
+}
+
+.readout-width-wide .readout-page,
+.readout-width-wide .readout-overview {
+  width: 24.62em;
+}
+
+.readout-width-wide .readout-status-message {
+  max-width: 24.62em;
+}
+
+.readout-spacing-compact .readout-header,
+.readout-spacing-compact .readout-header-button {
+  height: 2.58em;
+}
+
+.readout-spacing-compact .readout-card-list {
+  spacing: 0.49em;
+}
+
+.readout-spacing-compact .readout-separator {
+  height: 1.85em;
+}
+
+.readout-spacing-compact .readout-row {
+  height: 1.35em;
+}
+
+.readout-spacing-comfortable .readout-card-list {
+  spacing: 0.77em;
+}
+
+.readout-spacing-comfortable .readout-separator {
+  height: 2.88em;
+}
+
+.readout-spacing-comfortable .readout-row {
+  height: 2.11em;
+}
+
+/* The dense GPU detail grid keeps its height. */
+.readout-spacing-compact .readout-grid-rows .readout-row,
+.readout-spacing-comfortable .readout-grid-rows .readout-row {
+  height: 1.23em;
+}
+
+/* ---- Sections and rows ------------------------------------------------------------- */
+
+.readout-separator {
+  height: 2.31em;
+}
+
+.readout-separator-label {
+  font-size: 0.92em;
+  font-weight: 500;
+  padding: 0 0.67em;
+}
+
+/* Gap above each section title (6 pt, scaled by the spacing setting). */
+.readout-section-title {
+  padding-top: 0.46em;
+  spacing: 0.62em;
+}
+
+.readout-spacing-compact .readout-section-title {
+  padding-top: 0.37em;
+}
+
+.readout-spacing-comfortable .readout-section-title {
+  padding-top: 0.58em;
+}
+
+/* Thin rules on both sides of a section title. */
+.readout-separator-rule {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.readout-separator-button {
+  width: 1.385em;
+  height: 1.385em;
+  border-radius: 0.23em;
+}
+
+.readout-separator-button .readout-button-icon {
+  icon-size: 1em;
+}
+
+.readout-row {
+  height: 1.69em;
+}
+
+.readout-row-colored .readout-swatch {
+  margin: 0 0.31em 0 0.154em;
+}
+
+.readout-swatch {
+  width: 0.923em;
+  height: 0.923em;
+}
+
+.readout-row-label {
+  font-size: 0.92em;
+  padding-right: 0.3em;
+}
+
+.readout-row-value {
+  font-size: 1em;
+}
+
+.readout-row-value-compact {
+  font-size: 0.85em;
+}
+
+.readout-grid-rows .readout-row {
+  height: 1.23em;
+}
+
+.readout-message {
+  padding: 0.6em 0;
+  font-size: 0.92em;
+  text-align: center;
+}
+
+/* ---- Charts, rings and gauges ------------------------------------------------------- */
+
+.readout-chart-90 { height: 6.92em; }
+.readout-chart-70 { height: 5.38em; }
+.readout-chart-60 { height: 4.62em; }
+.readout-chart-50 { height: 3.85em; }
+.readout-chart-40 { height: 3.08em; }
+.readout-chart-36 { height: 2.77em; }
+
+.readout-chart-gap {
+  margin-top: 0.23em;
+}
+
+.readout-grid-28 {
+  height: 2.15em;
+  margin: 0.077em 0;
+}
+
+.readout-dashboard {
+  height: 6.92em;
+}
+
+.readout-ring {
+  width: 5.38em;
+  height: 5.38em;
+}
+
+.readout-ring-text {
+  font-size: 1.15em;
+}
+
+.readout-gauge {
+  width: 3.85em;
+  height: 3.85em;
+}
+
+.readout-gauge-text {
+  font-size: 0.77em;
+}
+
+.readout-gauge-caption {
+  font-size: 0.7em;
+}
+
+.readout-pressure-gauge {
+  width: 4.62em;
+  height: 3.85em;
+}
+
+.readout-capacity-bar {
+  height: 0.77em;
+}
+
+.readout-status-dot {
+  width: 0.46em;
+  height: 0.46em;
+  margin-left: 0.615em;
+}
+
+.readout-activity-dot {
+  width: 0.615em;
+  height: 0.615em;
+  margin-left: 0.154em;
+}
+
+.readout-activity-dot-first {
+  margin-left: 0.46em;
+}
+
+/* ---- Cards ------------------------------------------------------------------------- */
+
+.readout-card {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 0.154em;
+}
+
+/* GPU */
+.readout-gpu-heading {
+  spacing: 0.46em;
+}
+
+.readout-gpu-name {
+  font-weight: 500;
+}
+
+/* Disk */
+.readout-drive-card {
+  padding: 0.385em 0.615em;
+  spacing: 0.385em;
+}
+
+.readout-drive-title {
+  height: 1.23em;
+}
+
+.readout-drive-name {
+  padding: 0;
+}
+
+.readout-card-button {
+  width: 1.23em;
+  height: 1.23em;
+  border-radius: 0.23em;
+}
+
+.readout-card-button .readout-button-icon {
+  icon-size: 0.92em;
+}
+
+.readout-mount {
+  spacing: 0.23em;
+}
+
+.readout-mount-legend {
+  height: 1.23em;
+  padding: 0;
+}
+
+.readout-mount-point {
+  font-size: 0.85em;
+  font-weight: 500;
+  padding-right: 0.4em;
+  max-width: 6em;
+}
+
+.readout-mount-text {
+  font-size: 0.85em;
+  font-weight: 300;
+}
+
+.readout-mount-percent {
+  font-size: 0.85em;
+}
+
+/* Network */
+.readout-speed-half {
+  spacing: 0.1em;
+}
+
+.readout-big-number {
+  font-size: 2em;
+  font-weight: 300;
+  padding-right: 0.15em;
+}
+
+.readout-big-unit {
+  font-weight: 300;
+  padding-bottom: 0.25em;
+}
+
+.readout-speed-title {
+  spacing: 0.3em;
+}
+
+.readout-swatch-round4 {
+  width: 0.923em;
+  height: 0.923em;
+}
+
+.readout-link {
+  color: -st-accent-color;
+  padding: 0;
+}
+
+.readout-link:hover {
+  text-decoration: underline;
+}
+
+/* Sensors */
+.readout-fan-list {
+  spacing: 0.154em;
+}
+
+.readout-fan-card {
+  padding: 0.385em;
+}
+
+.readout-fan-value {
+  font-feature-settings: "tnum";
+}
+
+.readout-sensor-row {
+  height: 1.69em;
+  border-radius: 0.23em;
+  padding: 0 0.154em;
+}
+
+.readout-sensor-row:hover,
+.readout-sensor-row:focus {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.readout-sensor-chip {
+  font-size: 0.77em;
+  padding-left: 0.4em;
+}
+
+.readout-sensor-chart {
+  margin-bottom: 0.23em;
+}
+
+/* Bluetooth and peripheral batteries */
+.readout-device-card {
+  height: 2.31em;
+  padding: 0 0.385em;
+  spacing: 0.4em;
+}
+
+.readout-device-icon {
+  icon-size: 1em;
+}
+
+.readout-device-name {
+  font-weight: 300;
+}
+
+.readout-device-value {
+  font-size: 0.92em;
+}
+
+/* Battery */
+.readout-battery-icon {
+  width: 19.08em;
+  height: 5.69em;
+}
+
+/* Clock */
+.readout-calendar {
+  padding: 0.154em 0.615em 0.4em 0.615em;
+}
+
+.readout-calendar-navigation {
+  height: 2.19em;
+}
+
+.readout-calendar-title {
+  font-size: 1.23em;
+  font-weight: 500;
+}
+
+.readout-calendar-arrow {
+  width: 1.85em;
+  height: 1.85em;
+  border-radius: 0.3em;
+  color: inherit;
+}
+
+.readout-calendar-cell {
+  height: 2.19em;
+}
+
+.readout-calendar-mark {
+  width: 1.92em;
+  height: 1.92em;
+  border-radius: 0.96em;
+}
+
+.readout-calendar-weekday {
+  font-size: 0.92em;
+  color: #808080;
+}
+
+.readout-calendar-today {
+  background-color: #ff453a;
+}
+
+.readout-calendar-today .readout-calendar-day {
+  color: #ffffff;
+}
+
+.readout-clock-card {
+  height: 3.38em;
+  padding: 0 0.385em;
+  spacing: 0.385em;
+}
+
+.readout-analog-clock {
+  width: 2.62em;
+  height: 2.62em;
+}
+
+.readout-clock-text {
+  spacing: 0.154em;
+}
+
+.readout-clock-name {
+  font-size: 0.85em;
+  font-weight: 300;
+}
+
+/* ---- Top processes ------------------------------------------------------------------ */
+
+.readout-process-icon-box {
+  width: 1.69em;
+}
+
+.readout-process-icon {
+  icon-size: 0.923em;
+}
+
+.readout-process-title {
+  font-size: 0.92em;
+  font-weight: 500;
+}
+
+.readout-process-name {
+  font-size: 0.92em;
+}
+
+.readout-process-column {
+  width: 5.23em;
+}
+
+.readout-process-column-narrow {
+  width: 4.6em;
+}
+
+.readout-process-value-small {
+  font-size: 0.77em;
+}
+
+.readout-process-swatch {
+  width: 0.923em;
+  height: 0.923em;
+}
+
+/* ---- Combined overview -------------------------------------------------------------- */
+
+.readout-overview {
+  spacing: 0.615em;
+}
+
+.readout-summary {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 0.154em;
+  padding: 0 0.615em 0.385em 0.615em;
+  spacing: 0.3em;
+}
+
+.readout-summary-header {
+  height: 2.15em;
+}
+
+.readout-summary-title {
+  font-weight: 500;
+}
+
+.readout-summary-open {
+  font-size: 1.4em;
+  width: 1.3em;
+  height: 1.3em;
+  border-radius: 0.3em;
+  color: #aaaaaa;
+}
+
+.readout-summary-open:hover,
+.readout-summary-open:focus {
+  color: inherit;
+  background-color: rgba(170, 170, 170, 0.2);
+}
+
+.readout-summary-body {
+  spacing: 0.77em;
+}
+
+.readout-summary-battery {
+  width: 5.38em;
+  height: 3em;
+}
+
+/* ---- Tooltip ----------------------------------------------------------------------- */
+
+.readout-tooltip {
+  text-align: left;
+  font-feature-settings: "tnum";
+}

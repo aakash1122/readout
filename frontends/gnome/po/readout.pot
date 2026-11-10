@@ -1,0 +1,1335 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the readout package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: readout 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 19:10+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: prefs.js:24
+msgid "Left"
+msgstr ""
+
+#: prefs.js:25
+msgid "Center"
+msgstr ""
+
+#: prefs.js:26
+msgid "Right"
+msgstr ""
+
+#: prefs.js:31
+msgid "Compact"
+msgstr ""
+
+#: prefs.js:32 prefs.js:37 lib/popups.js:323 lib/summaries.js:166
+msgid "Normal"
+msgstr ""
+
+#: prefs.js:33
+msgid "Comfortable"
+msgstr ""
+
+#: prefs.js:36
+msgid "Narrow"
+msgstr ""
+
+#: prefs.js:38
+msgid "Wide"
+msgstr ""
+
+#: prefs.js:44
+msgid "CPU usage above"
+msgstr ""
+
+#: prefs.js:45
+msgid "Memory usage above"
+msgstr ""
+
+#: prefs.js:46
+msgid "CPU temperature above"
+msgstr ""
+
+#: prefs.js:47
+msgid "GPU temperature above"
+msgstr ""
+
+#: prefs.js:48
+msgid "Disk free space below"
+msgstr ""
+
+#: prefs.js:49
+msgid "Battery level below (discharging)"
+msgstr ""
+
+#: prefs.js:50
+msgid "Battery level reached (charging)"
+msgstr ""
+
+#: prefs.js:115 prefs.js:119
+msgid "Panel Items"
+msgstr ""
+
+#: prefs.js:120
+msgid ""
+"Each item is its own panel button. Add several modules to one item to "
+"combine them in one button and popup."
+msgstr ""
+
+#: prefs.js:123
+msgid "Add Item"
+msgstr ""
+
+#: prefs.js:189
+msgid "Move Up"
+msgstr ""
+
+#: prefs.js:190
+msgid "Move Down"
+msgstr ""
+
+#: prefs.js:191
+msgid "Remove Item"
+msgstr ""
+
+#. Display options.
+#: prefs.js:212
+msgid "Show Label"
+msgstr ""
+
+#: prefs.js:212
+msgid "Short label such as “CPU”; vertical on charts"
+msgstr ""
+
+#: prefs.js:214
+msgid "Show Icon"
+msgstr ""
+
+#: prefs.js:218
+msgid "Color"
+msgstr ""
+
+#: prefs.js:218
+msgid "Applies to bars and charts"
+msgstr ""
+
+#: prefs.js:222
+msgid "Warning Threshold"
+msgstr ""
+
+#: prefs.js:223
+msgid "Critical Threshold"
+msgstr ""
+
+#: prefs.js:226
+msgid "Processes in Popup"
+msgstr ""
+
+#: prefs.js:228
+msgid "Speeds in Bits"
+msgstr ""
+
+#: prefs.js:228
+msgid "Show Mb/s instead of MB/s"
+msgstr ""
+
+#: prefs.js:234
+msgid "24-Hour Time"
+msgstr ""
+
+#: prefs.js:235
+msgid "Show Seconds"
+msgstr ""
+
+#: prefs.js:255
+msgid "Widget style"
+msgstr ""
+
+#: prefs.js:266
+msgid "Remove Module"
+msgstr ""
+
+#: prefs.js:279 prefs.js:287
+msgid "Add Module"
+msgstr ""
+
+#: prefs.js:280
+msgid "Combine another module into this item"
+msgstr ""
+
+#: prefs.js:344
+msgid "Automatic"
+msgstr ""
+
+#: prefs.js:347 lib/catalog.js:18 lib/summaries.js:234 lib/values.js:67
+msgid "GPU"
+msgstr ""
+
+#: prefs.js:347
+msgid "Automatic picks the first non-secondary GPU"
+msgstr ""
+
+#: prefs.js:353
+msgid "Panel Sensors"
+msgstr ""
+
+#: prefs.js:355 prefs.js:360
+#, javascript-format
+msgid "%d selected"
+msgstr ""
+
+#: prefs.js:356 prefs.js:361
+msgid "CPU and GPU temperature"
+msgstr ""
+
+#: prefs.js:364
+msgid "Loading sensors…"
+msgstr ""
+
+#: prefs.js:371
+msgid "The Readout service (readoutd) is not available"
+msgstr ""
+
+#: prefs.js:372 lib/popups.js:1046
+msgid "No sensors found"
+msgstr ""
+
+#: prefs.js:409
+msgid "Extra Time Zones (comma separated, e.g. Europe/Berlin)"
+msgstr ""
+
+#: prefs.js:431
+msgid "General"
+msgstr ""
+
+#: prefs.js:433
+msgid "Panel"
+msgstr ""
+
+#: prefs.js:435
+msgid "Update Interval"
+msgstr ""
+
+#: prefs.js:436
+msgid "Seconds between updates for all items"
+msgstr ""
+
+#: prefs.js:441
+msgid "Position"
+msgstr ""
+
+#: prefs.js:441
+msgid "Area of the top bar that holds the items"
+msgstr ""
+
+#: prefs.js:446
+msgid "System Service"
+msgstr ""
+
+#: prefs.js:447
+msgid "readoutd"
+msgstr ""
+
+#: prefs.js:447
+msgid "Checking…"
+msgstr ""
+
+#: prefs.js:452
+#, javascript-format
+msgid "Version %s"
+msgstr ""
+
+#: prefs.js:453
+msgid ""
+"Not installed or not running. Install the “readout” package from your "
+"distribution."
+msgstr ""
+
+#: prefs.js:486
+msgid "Popup"
+msgstr ""
+
+#: prefs.js:487
+msgid "Shared by all Readout items."
+msgstr ""
+
+#: prefs.js:491
+msgid "Text Size"
+msgstr ""
+
+#: prefs.js:492
+msgid "Percent of the shell font; charts scale with it"
+msgstr ""
+
+#: prefs.js:497
+msgid "Spacing"
+msgstr ""
+
+#: prefs.js:497
+msgid "Height of rows and gaps between sections"
+msgstr ""
+
+#: prefs.js:500
+msgid "Margins"
+msgstr ""
+
+#: prefs.js:501
+msgid "Space around the content, in points"
+msgstr ""
+
+#: prefs.js:505
+msgid "Width"
+msgstr ""
+
+#: prefs.js:507
+msgid "Reset Popup Look"
+msgstr ""
+
+#: prefs.js:517 prefs.js:519
+msgid "Alerts"
+msgstr ""
+
+#: prefs.js:520
+msgid ""
+"An alert is sent once a condition holds for 10 seconds. It can fire again "
+"after the value goes back past the threshold."
+msgstr ""
+
+#: prefs.js:526
+msgid "Threshold"
+msgstr ""
+
+#: prefs.js:532
+msgid "Network connectivity lost"
+msgstr ""
+
+#: lib/alerts.js:22
+msgid "High CPU usage"
+msgstr ""
+
+#: lib/alerts.js:23
+#, javascript-format
+msgid "CPU usage is %s."
+msgstr ""
+
+#: lib/alerts.js:31
+msgid "High memory usage"
+msgstr ""
+
+#: lib/alerts.js:32
+#, javascript-format
+msgid "Memory usage is %s."
+msgstr ""
+
+#: lib/alerts.js:40
+msgid "CPU is hot"
+msgstr ""
+
+#: lib/alerts.js:41
+#, javascript-format
+msgid "CPU temperature is %s."
+msgstr ""
+
+#: lib/alerts.js:51
+msgid "GPU is hot"
+msgstr ""
+
+#: lib/alerts.js:52
+#, javascript-format
+msgid "%s temperature is %s."
+msgstr ""
+
+#: lib/alerts.js:61
+msgid "Disk almost full"
+msgstr ""
+
+#: lib/alerts.js:62
+#, javascript-format
+msgid "%s free on %s."
+msgstr ""
+
+#: lib/alerts.js:70
+msgid "Battery low"
+msgstr ""
+
+#: lib/alerts.js:71
+#, javascript-format
+msgid "Battery level is %s."
+msgstr ""
+
+#: lib/alerts.js:79
+msgid "Battery charged"
+msgstr ""
+
+#: lib/alerts.js:80
+#, javascript-format
+msgid "Battery level reached %s. You can unplug the charger."
+msgstr ""
+
+#: lib/alerts.js:88
+msgid "Internet connection lost"
+msgstr ""
+
+#: lib/alerts.js:89
+msgid "The network is not connected."
+msgstr ""
+
+#: lib/alerts.js:156 lib/panelItem.js:294
+msgid "Readout"
+msgstr ""
+
+#: lib/catalog.js:14 lib/summaries.js:232 lib/values.js:65
+msgid "CPU"
+msgstr ""
+
+#: lib/catalog.js:15 lib/catalog.js:39 lib/popups.js:393 lib/popups.js:525
+msgid "Memory"
+msgstr ""
+
+#: lib/catalog.js:15
+msgid "RAM"
+msgstr ""
+
+#: lib/catalog.js:16
+msgid "Disk"
+msgstr ""
+
+#: lib/catalog.js:16
+msgid "SSD"
+msgstr ""
+
+#: lib/catalog.js:17 lib/popups.js:951
+msgid "Network"
+msgstr ""
+
+#: lib/catalog.js:17
+msgid "NET"
+msgstr ""
+
+#: lib/catalog.js:19
+msgid "Sensors"
+msgstr ""
+
+#: lib/catalog.js:19
+msgid "TEMP"
+msgstr ""
+
+#: lib/catalog.js:20 lib/catalog.js:38 lib/popups.js:1219 lib/popups.js:1227
+msgid "Battery"
+msgstr ""
+
+#: lib/catalog.js:20
+msgid "BAT"
+msgstr ""
+
+#: lib/catalog.js:21
+msgid "Bluetooth"
+msgstr ""
+
+#: lib/catalog.js:21
+msgid "BT"
+msgstr ""
+
+#: lib/catalog.js:22
+msgid "Clock"
+msgstr ""
+
+#: lib/catalog.js:22
+msgid "TIME"
+msgstr ""
+
+#: lib/catalog.js:28
+msgid "Text"
+msgstr ""
+
+#: lib/catalog.js:29
+msgid "Mini"
+msgstr ""
+
+#: lib/catalog.js:30
+msgid "Line chart"
+msgstr ""
+
+#: lib/catalog.js:31
+msgid "Bar chart"
+msgstr ""
+
+#: lib/catalog.js:32
+msgid "Pie"
+msgstr ""
+
+#: lib/catalog.js:33
+msgid "Tachometer"
+msgstr ""
+
+#: lib/catalog.js:34 lib/popups.js:959
+msgid "Speed"
+msgstr ""
+
+#: lib/catalog.js:35
+msgid "Network chart"
+msgstr ""
+
+#: lib/catalog.js:36
+msgid "State"
+msgstr ""
+
+#: lib/catalog.js:37
+msgid "Stack"
+msgstr ""
+
+#: lib/catalog.js:56
+msgid "Accent color"
+msgstr ""
+
+#: lib/catalog.js:57
+msgid "Thresholds"
+msgstr ""
+
+#: lib/catalog.js:58
+msgid "Monochrome"
+msgstr ""
+
+#. Translators: a row label followed by its value, e.g. "System:"
+#: lib/components.js:51
+#, javascript-format
+msgid "%s:"
+msgstr ""
+
+#: lib/components.js:232
+msgid "Top processes"
+msgstr ""
+
+#: lib/components.js:236
+msgid "Process"
+msgstr ""
+
+#: lib/format.js:31 lib/format.js:51 lib/format.js:71
+msgid "B"
+msgstr ""
+
+#: lib/format.js:31 lib/format.js:51 lib/format.js:71
+msgid "KB"
+msgstr ""
+
+#: lib/format.js:31 lib/format.js:51 lib/format.js:71
+msgid "MB"
+msgstr ""
+
+#: lib/format.js:31 lib/format.js:51 lib/format.js:71
+msgid "GB"
+msgstr ""
+
+#: lib/format.js:31 lib/format.js:51 lib/format.js:71
+msgid "TB"
+msgstr ""
+
+#: lib/format.js:51 lib/format.js:71
+msgid "PB"
+msgstr ""
+
+#: lib/format.js:89
+msgid "Kb/s"
+msgstr ""
+
+#: lib/format.js:89
+msgid "Mb/s"
+msgstr ""
+
+#: lib/format.js:89
+msgid "Gb/s"
+msgstr ""
+
+#: lib/format.js:89
+msgid "KB/s"
+msgstr ""
+
+#: lib/format.js:89
+msgid "MB/s"
+msgstr ""
+
+#: lib/format.js:89
+msgid "GB/s"
+msgstr ""
+
+#: lib/format.js:132
+msgid "MHz"
+msgstr ""
+
+#: lib/format.js:172
+#, javascript-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/format.js:174
+#, javascript-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/format.js:176
+#, javascript-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#. Translators: separator between duration parts, e.g. "2 days, 4 hours"
+#: lib/format.js:178
+msgid ", "
+msgstr ""
+
+#. Translators: battery time in minutes, e.g. "45min"
+#: lib/format.js:195
+#, javascript-format
+msgid "%smin"
+msgstr ""
+
+#. Translators: battery time, e.g. "3h 07min"
+#: lib/format.js:197
+#, javascript-format
+msgid "%dh %smin"
+msgstr ""
+
+#: lib/format.js:208 lib/popups.js:518 lib/summaries.js:153 lib/values.js:171
+msgid "Sleeping"
+msgstr ""
+
+#: lib/format.js:214 lib/popups.js:546
+msgid "RPM"
+msgstr ""
+
+#: lib/panelItem.js:53
+#, javascript-format
+msgid "Readout: %s"
+msgstr ""
+
+#: lib/panelItem.js:180
+msgid ""
+"The Readout system service (readoutd) is not installed. Install the "
+"“readout” package from your distribution to see system statistics."
+msgstr ""
+
+#: lib/panelItem.js:181
+msgid "Cannot reach the Readout system service. Retrying…"
+msgstr ""
+
+#: lib/panelItem.js:200
+msgid "Open Calendar"
+msgstr ""
+
+#: lib/panelItem.js:200
+msgid "Open System Monitor"
+msgstr ""
+
+#: lib/panelItem.js:206
+msgid "Back"
+msgstr ""
+
+#: lib/panelItem.js:216
+msgid "Readout Settings"
+msgstr ""
+
+#: lib/panelItem.js:414
+msgid "readoutd is not installed"
+msgstr ""
+
+#: lib/panelWidgets.js:474
+msgid "F:"
+msgstr ""
+
+#: lib/panelWidgets.js:475
+msgid "U:"
+msgstr ""
+
+#: lib/popups.js:178 lib/popups.js:333 lib/popups.js:451 lib/popups.js:852
+msgid "Usage history"
+msgstr ""
+
+#: lib/popups.js:185 lib/popups.js:336 lib/popups.js:463 lib/popups.js:610
+#: lib/popups.js:865 lib/popups.js:1152
+msgid "Details"
+msgstr ""
+
+#: lib/popups.js:187
+msgid "Average load"
+msgstr ""
+
+#: lib/popups.js:189
+msgid "Frequency"
+msgstr ""
+
+#: lib/popups.js:192 lib/popups.js:338 lib/summaries.js:141
+#: lib/summaries.js:154
+msgid "Usage"
+msgstr ""
+
+#: lib/popups.js:244
+msgid "System"
+msgstr ""
+
+#: lib/popups.js:245
+msgid "User"
+msgstr ""
+
+#: lib/popups.js:247 lib/summaries.js:142
+msgid "Idle"
+msgstr ""
+
+#: lib/popups.js:250 lib/popups.js:279
+msgid "Efficiency cores"
+msgstr ""
+
+#: lib/popups.js:252 lib/popups.js:281
+msgid "Performance cores"
+msgstr ""
+
+#: lib/popups.js:254
+msgid "I/O wait"
+msgstr ""
+
+#: lib/popups.js:256
+msgid "Processes"
+msgstr ""
+
+#: lib/popups.js:258
+msgid "Threads"
+msgstr ""
+
+#: lib/popups.js:260
+msgid "Uptime"
+msgstr ""
+
+#: lib/popups.js:264
+msgid "1 minute"
+msgstr ""
+
+#: lib/popups.js:265
+msgid "5 minutes"
+msgstr ""
+
+#: lib/popups.js:266
+msgid "15 minutes"
+msgstr ""
+
+#: lib/popups.js:271
+msgid "All cores"
+msgstr ""
+
+#: lib/popups.js:323 lib/summaries.js:167
+msgid "Warning"
+msgstr ""
+
+#: lib/popups.js:323 lib/summaries.js:167
+msgid "Critical"
+msgstr ""
+
+#: lib/popups.js:362 lib/popups.js:373 lib/popups.js:524 lib/values.js:157
+#, javascript-format
+msgid "%s of %s"
+msgstr ""
+
+#: lib/popups.js:363 lib/summaries.js:163 lib/summaries.js:174
+msgid "Used"
+msgstr ""
+
+#: lib/popups.js:364
+msgid "App"
+msgstr ""
+
+#: lib/popups.js:365
+msgid "Kernel"
+msgstr ""
+
+#: lib/popups.js:367
+msgid "Compressed"
+msgstr ""
+
+#: lib/popups.js:369 lib/summaries.js:164 lib/summaries.js:175
+msgid "Free"
+msgstr ""
+
+#: lib/popups.js:370
+msgid "Cache"
+msgstr ""
+
+#: lib/popups.js:371
+msgid "Available"
+msgstr ""
+
+#: lib/popups.js:374 lib/summaries.js:165
+msgid "Swap"
+msgstr ""
+
+#: lib/popups.js:375 lib/summaries.js:167
+msgid "Pressure"
+msgstr ""
+
+#: lib/popups.js:396 lib/popups.js:542 lib/popups.js:1017 lib/popups.js:1237
+msgid "Power"
+msgstr ""
+
+#: lib/popups.js:442 lib/popups.js:521 lib/popups.js:704 lib/popups.js:1014
+#: lib/popups.js:1235 lib/summaries.js:156 lib/summaries.js:193
+msgid "Temperature"
+msgstr ""
+
+#: lib/popups.js:456
+msgid "Temperature history"
+msgstr ""
+
+#: lib/popups.js:485
+msgid "Sleeping, not woken to read it"
+msgstr ""
+
+#: lib/popups.js:485
+msgid "Not measured"
+msgstr ""
+
+#: lib/popups.js:515
+msgid "Model"
+msgstr ""
+
+#: lib/popups.js:516
+msgid "Vendor"
+msgstr ""
+
+#: lib/popups.js:517
+msgid "Driver"
+msgstr ""
+
+#: lib/popups.js:518
+msgid "Active"
+msgstr ""
+
+#: lib/popups.js:518 lib/values.js:173
+msgid "Awake"
+msgstr ""
+
+#: lib/popups.js:518 lib/popups.js:934 lib/popups.js:946 lib/summaries.js:200
+msgid "Status"
+msgstr ""
+
+#: lib/popups.js:519
+msgid "Utilization"
+msgstr ""
+
+#: lib/popups.js:537
+msgid "Core clock"
+msgstr ""
+
+#: lib/popups.js:539
+msgid "Memory clock"
+msgstr ""
+
+#: lib/popups.js:541
+msgid "Max core clock"
+msgstr ""
+
+#: lib/popups.js:544
+msgid "Power limit"
+msgstr ""
+
+#: lib/popups.js:547
+msgid "Fan speed"
+msgstr ""
+
+#: lib/popups.js:548
+msgid "PCI slot"
+msgstr ""
+
+#: lib/popups.js:557
+msgid "No GPU found"
+msgstr ""
+
+#: lib/popups.js:625
+msgid "SMART"
+msgstr ""
+
+#: lib/popups.js:679
+#, javascript-format
+msgid "%s of %s used"
+msgstr ""
+
+#: lib/popups.js:680
+#, javascript-format
+msgid "%s of %s free"
+msgstr ""
+
+#: lib/popups.js:692 lib/summaries.js:178
+msgid "Read"
+msgstr ""
+
+#: lib/popups.js:693 lib/summaries.js:177
+msgid "Write"
+msgstr ""
+
+#: lib/popups.js:695
+msgid "Busy"
+msgstr ""
+
+#: lib/popups.js:697
+msgid "Total read"
+msgstr ""
+
+#: lib/popups.js:699
+msgid "Total written"
+msgstr ""
+
+#: lib/popups.js:702
+msgid "OK"
+msgstr ""
+
+#: lib/popups.js:702
+msgid "Failing"
+msgstr ""
+
+#: lib/popups.js:705 lib/popups.js:1229 lib/summaries.js:202
+msgid "Health"
+msgstr ""
+
+#: lib/popups.js:706
+msgid "Power on hours"
+msgstr ""
+
+#: lib/popups.js:847
+msgid "Downloading"
+msgstr ""
+
+#: lib/popups.js:848
+msgid "Uploading"
+msgstr ""
+
+#: lib/popups.js:859
+msgid "Connectivity history"
+msgstr ""
+
+#: lib/popups.js:865
+msgid "Reset totals"
+msgstr ""
+
+#: lib/popups.js:875 lib/popups.js:945
+msgid "Interface"
+msgstr ""
+
+#: lib/popups.js:875
+msgid "More interface details"
+msgstr ""
+
+#: lib/popups.js:882
+msgid "Address"
+msgstr ""
+
+#: lib/popups.js:882
+msgid "Refresh public address"
+msgstr ""
+
+#: lib/popups.js:889
+msgid "Public IP"
+msgstr ""
+
+#: lib/popups.js:893
+msgid "Show"
+msgstr ""
+
+#: lib/popups.js:903
+msgid "Other interfaces"
+msgstr ""
+
+#: lib/popups.js:932
+msgid "Total upload"
+msgstr ""
+
+#: lib/popups.js:933
+msgid "Total download"
+msgstr ""
+
+#: lib/popups.js:934 lib/popups.js:935 lib/popups.js:946
+msgid "UP"
+msgstr ""
+
+#: lib/popups.js:934 lib/popups.js:935 lib/popups.js:946
+msgid "DOWN"
+msgstr ""
+
+#: lib/popups.js:936 lib/popups.js:1197 lib/values.js:215
+msgid "Unknown"
+msgstr ""
+
+#: lib/popups.js:937
+msgid "Internet connection"
+msgstr ""
+
+#: lib/popups.js:939
+msgid "Ethernet"
+msgstr ""
+
+#: lib/popups.js:939
+msgid "Wi-Fi"
+msgstr ""
+
+#: lib/popups.js:939
+msgid "VPN"
+msgstr ""
+
+#: lib/popups.js:939
+msgid "Other"
+msgstr ""
+
+#: lib/popups.js:947
+msgid "Physical address"
+msgstr ""
+
+#: lib/popups.js:953
+msgid "Connection"
+msgstr ""
+
+#: lib/popups.js:956
+msgid "Channel"
+msgstr ""
+
+#: lib/popups.js:957
+msgid "Security"
+msgstr ""
+
+#: lib/popups.js:958
+#, javascript-format
+msgid "%d Mb/s"
+msgstr ""
+
+#: lib/popups.js:962 lib/summaries.js:187
+msgid "Local IP"
+msgstr ""
+
+#: lib/popups.js:964
+msgid "Local IPv6"
+msgstr ""
+
+#: lib/popups.js:983
+msgid "Updating..."
+msgstr ""
+
+#: lib/popups.js:988
+msgid "Unavailable"
+msgstr ""
+
+#: lib/popups.js:1015 lib/popups.js:1240
+msgid "Voltage"
+msgstr ""
+
+#: lib/popups.js:1016 lib/popups.js:1239
+msgid "Current"
+msgstr ""
+
+#: lib/popups.js:1029
+msgid "Fans"
+msgstr ""
+
+#: lib/popups.js:1146
+msgid "This computer has no battery."
+msgstr ""
+
+#: lib/popups.js:1159
+msgid "Power adapter"
+msgstr ""
+
+#: lib/popups.js:1163 lib/summaries.js:216
+msgid "Devices"
+msgstr ""
+
+#: lib/popups.js:1194 lib/summaries.js:199
+msgid "Level"
+msgstr ""
+
+#: lib/popups.js:1195
+msgid "AC Power"
+msgstr ""
+
+#: lib/popups.js:1195
+msgid "Battery Power"
+msgstr ""
+
+#: lib/popups.js:1195
+msgid "Source"
+msgstr ""
+
+#: lib/popups.js:1196
+msgid "Time to discharge"
+msgstr ""
+
+#: lib/popups.js:1199 lib/popups.js:1202 lib/popups.js:1207
+msgid "Time to charge"
+msgstr ""
+
+#: lib/popups.js:1200 lib/values.js:207
+msgid "Fully charged"
+msgstr ""
+
+#: lib/popups.js:1203 lib/popups.js:1205
+msgid "Calculating"
+msgstr ""
+
+#: lib/popups.js:1213
+msgid "Last charge"
+msgstr ""
+
+#: lib/popups.js:1232
+msgid "Capacity"
+msgstr ""
+
+#: lib/popups.js:1233
+msgid "Cycles"
+msgstr ""
+
+#: lib/popups.js:1242
+msgid "Technology"
+msgstr ""
+
+#: lib/popups.js:1245
+msgid "Yes"
+msgstr ""
+
+#: lib/popups.js:1245
+msgid "No"
+msgstr ""
+
+#: lib/popups.js:1245
+msgid "Is charging"
+msgstr ""
+
+#: lib/popups.js:1286
+msgid "No Bluetooth adapter found"
+msgstr ""
+
+#: lib/popups.js:1288
+msgid "Bluetooth is off"
+msgstr ""
+
+#: lib/popups.js:1290
+msgid "No Bluetooth devices are available"
+msgstr ""
+
+#: lib/popups.js:1303 lib/summaries.js:210
+msgid "Connected"
+msgstr ""
+
+#: lib/popups.js:1303
+msgid "Not connected"
+msgstr ""
+
+#: lib/popups.js:1329
+msgid "Previous month"
+msgstr ""
+
+#: lib/popups.js:1331
+msgid "Next month"
+msgstr ""
+
+#: lib/popups.js:1443 lib/summaries.js:115
+msgid "Local time"
+msgstr ""
+
+#: lib/summaries.js:57
+#, javascript-format
+msgid "Show %s details"
+msgstr ""
+
+#: lib/summaries.js:144
+msgid "E-cores"
+msgstr ""
+
+#: lib/summaries.js:146
+msgid "P-cores"
+msgstr ""
+
+#: lib/summaries.js:157
+msgid "Memory used"
+msgstr ""
+
+#: lib/summaries.js:173
+msgid "Name"
+msgstr ""
+
+#: lib/summaries.js:182
+msgid "Upload"
+msgstr ""
+
+#: lib/summaries.js:183
+msgid "Download"
+msgstr ""
+
+#: lib/summaries.js:199 lib/values.js:186
+msgid "No battery"
+msgstr ""
+
+#: lib/summaries.js:215
+msgid "None"
+msgstr ""
+
+#: lib/summaries.js:215 lib/values.js:109 lib/values.js:130 lib/values.js:190
+msgid "Off"
+msgstr ""
+
+#: lib/values.js:111
+msgid "On"
+msgstr ""
+
+#: lib/values.js:125
+msgid "AC"
+msgstr ""
+
+#: lib/values.js:160
+#, javascript-format
+msgid "%s free"
+msgstr ""
+
+#: lib/values.js:190
+#, javascript-format
+msgid "%d connected"
+msgstr ""
+
+#: lib/values.js:203
+msgid "Charging"
+msgstr ""
+
+#: lib/values.js:205
+msgid "Discharging"
+msgstr ""
+
+#: lib/values.js:209
+msgid "Empty"
+msgstr ""
+
+#: lib/values.js:211
+msgid "Not charging"
+msgstr ""
+
+#: lib/values.js:213
+msgid "Waiting to discharge"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:6
+msgid "Panel items"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:7
+msgid ""
+"JSON list of panel items. Each item has \"modules\" (one or more for a "
+"combined item), \"styles\" (module to widget style) and display options; "
+"missing options use the defaults (color mode \"accent\", 8 processes, "
+"warning 70 and critical 90). Edit it in the preferences window."
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:12
+msgid "Update interval in seconds"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:21
+msgid "Panel area"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:26
+msgid "Popup text size in percent"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:27
+msgid "Scales the text and everything drawn in the popups."
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:36
+msgid "Popup row spacing"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:41
+msgid "Popup margins in points"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:45
+msgid "Last popup page heights"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:46
+msgid ""
+"Internal: the last full height of each popup page (\"readout-N/module\" to "
+"px), so a popup opens at that height instead of growing when its detail data "
+"arrives."
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:55
+msgid "Popup width"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:58
+msgid "Alert on high CPU usage"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:59
+msgid "CPU usage alert threshold (percent)"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:60
+msgid "Alert on high memory usage"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:61
+msgid "Memory usage alert threshold (percent)"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:62
+msgid "Alert on high CPU temperature"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:63
+msgid "CPU temperature alert threshold (°C)"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:64
+msgid "Alert on high GPU temperature"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:65
+msgid "GPU temperature alert threshold (°C)"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:66
+msgid "Alert on low disk space"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:67
+msgid "Free disk space alert threshold (percent)"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:68
+msgid "Alert on low battery"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:69
+msgid "Low battery alert threshold (percent)"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:70
+msgid "Alert when the battery is charged"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:71
+msgid "Charged battery alert threshold (percent)"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.readout.gschema.xml:72
+msgid "Alert when the internet connection is lost"
+msgstr ""

@@ -1,0 +1,112 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  fedora:
+    name: Fedora (${{ matrix.compiler }})
+    runs-on: ubuntu-latest
+    container: fedora:44
+    strategy:
+      fail-fast: false
+      matrix:
+        compiler: [gcc, clang]
+    steps:
+      - name: Install dependencies
+        run: |
+          dnf install -y --setopt=install_weak_deps=False \
+            git cmake ninja-build gcc-c++ clang clang-tools-extra python3 \
+            systemd-devel gtest-devel dbus-daemon hwdata \
+            extra-cmake-modules qt6-qtbase-devel qt6-qtbase-private-devel qt6-qtdeclarative-devel \
+            kf6-ki18n-devel kf6-kcoreaddons-devel kf6-kconfig-devel kf6-knotifications-devel \
+            kf6-kquickcharts-devel kf6-kirigami-devel libplasma-devel \
+            glib2-devel gettext gnome-shell
+      - uses: actions/checkout@v4
+      - name: Configure
+        run: |
+          if [ "${{ matrix.compiler }}" = clang ]; then export CC=clang CXX=clang++; fi
+          cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=RelWithDebInfo -DREADOUT_WERROR=ON
+      - name: Build
+        run: cmake --build build
+      - name: Test
+        run: ctest --test-dir build --output-on-failure
+      - name: clang-tidy
+        if: matrix.compiler == 'clang'
+        run: run-clang-tidy -p build -quiet 'daemon/src/.*' 'tools/readoutctl/.*'
+
+  sanitizers:
+    name: Sanitizers and fuzzing
+    runs-on: ubuntu-latest
+    container: fedora:44
+    steps:
+      - name: Install dependencies
+        run: |
+          dnf install -y --setopt=install_weak_deps=False \
+            git cmake ninja-build clang compiler-rt python3 systemd-devel gtest-devel dbus-daemon hwdata
+      - uses: actions/checkout@v4
+      - name: Build
+        run: |
+          CC=clang CXX=clang++ cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug \
+            -DREADOUT_BUILD_PLASMA=OFF -DREADOUT_BUILD_GNOME=OFF \
+            -DREADOUT_SANITIZE=address,undefined -DREADOUT_FUZZ=ON
+          cmake --build build
+      - name: Test
+        env:
+          UBSAN_OPTIONS: halt_on_error=1:print_stacktrace=1
+        run: ctest --test-dir build --output-on-failure
+
+  debian:
+    name: Debian 13 (daemon)
+    runs-on: ubuntu-latest
+    container: debian:trixie
+    steps:
+      - name: Install dependencies
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends \
+            ca-certificates git cmake ninja-build g++ pkg-config python3 \
+            libsystemd-dev libgtest-dev dbus-daemon pci.ids
+      - uses: actions/checkout@v4
+      - name: Build and test
+        run: |
+          cmake -S . -B build -G Ninja -DREADOUT_BUILD_PLASMA=OFF -DREADOUT_BUILD_GNOME=OFF -DREADOUT_WERROR=ON
+          cmake --build build
+          ctest --test-dir build --output-on-failure
+
+  arch:
+    name: Arch Linux
+    runs-on: ubuntu-latest
+    container: archlinux:latest
+    steps:
+      - name: Install dependencies
+        run: |
+          pacman -Syu --noconfirm --needed \
+            git cmake ninja gcc python systemd-libs gtest dbus hwdata \
+            extra-cmake-modules qt6-base qt6-declarative ki18n kcoreaddons kconfig knotifications \
+            kquickcharts kirigami libplasma glib2 gettext gnome-shell
+      - uses: actions/checkout@v4
+      - name: Build and test
+        run: |
+          cmake -S . -B build -G Ninja -DREADOUT_WERROR=ON
+          cmake --build build
+          ctest --test-dir build --output-on-failure
+
+  gnome-lint:
+    name: GNOME extension lint
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontends/gnome
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npx eslint .
+      - run: for file in extension.js prefs.js lib/*.js; do node --check "$file"; done

@@ -1,0 +1,6 @@
+43 13: 05 /root / Inter-| ÌÌÌÌ 0    0     0       0          0
+vethb08c809:   14755     25-    0êßþÿ„oüHs4  0    0     0       1·  1 1113111111111111111111rw,relatime shared:1 - btrfs /dev/nvme0n1p3 rw,seclabel,compress=zstd:1Z    0      1110   &41,ssd,discard=async,space_cache=v2,subvolid=256,subvol=/root
+40 43 0:Èß/ /dev rw,nosui¾ shared:2 - devtmpfs devtmpfs rw,seclabel,size=15964684k,nr_inodes=3991171,mode=755,inode64
+42 40 0:<7 / /dev/shm rw,nosuid,nodev id,nod,nosymfollow shared:54 - tmpfs none ro,seclabel,size=1025k,nr_inodes=1024,mode=700,inode64,noswap
+60 43 0::5 - sysfs sysfs rw,seclabel
+46 45 0:8 / /sys/kernel/security r2 - overlay overlay  0    rw,0    0   s 

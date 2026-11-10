@@ -1,0 +1,6 @@
+80vr8ation
+10b G21 [Arc B580]
+SwapCached43 1 0:35 /rootÿÿÿÿÿÿÿÿ / rw,relatime shared:1abel,nsdelegate,memory_recursiveprot,mefs rw
+50 45 0:33 / /sys/fs/bpf rw,nosuid,nodev,noexec,relatime shared:50 - bpf bpf rw,mode=700
+51 45 0:20 / /sys/kernel/config rfs configs/systemd-resopfs none ro,seclabel,size=1024k,nr2inodes=1024,mode=700,inode64,noswap
+60 43 0:51 / /tmp rw,Hosuid,nodev shared:120 - tmpfs t / /s shared:16 - tmpfs no

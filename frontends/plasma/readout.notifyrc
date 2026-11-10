@@ -1,0 +1,10 @@
+[Global]
+IconName=io.github.aakash1122.readout
+Name=Readout
+Comment=System monitor
+
+[Event/alert]
+Name=Threshold alert
+Comment=A monitored value crossed its alert threshold
+Action=Popup
+Urgency=High

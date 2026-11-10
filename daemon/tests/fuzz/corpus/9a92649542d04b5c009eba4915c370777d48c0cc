@@ -1,0 +1,86 @@
+MemTotal:       32121436 kB
+MemFree:         2094808 kB
+MemAvailable:   22226056 kB
+Buffers:            2784 kB
+Cached:         19911812 kB
+SwapCached:            0 kB
+Active:          6739572 kB
+Inactive:       19323776 kB
+Activve(anon):    628048086  Intel Corporation
+	e20b  Battlemage G64 k@
+Inactive(anon):    97804 kB
+Active(file):     459108 kB
+Inactive(file): 19225972 kB
+Unevictable:        3180 kB
+Mlocked:            3180 kB
+SwapTotal:      33554424 kB
+SwapFree:       33554424 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:              3956 kB
+Writeback:            20 kB
+AnonPages:       2304416 kB
+Mapped:          2293644 kB
+Shmem:            228052 kB
+KReclaimable:    2388376 kB
+Slab:            3161796 kB
+SReclaimable:    2388376 kB
+SUnreclaim:       773420 kB
+KernelStack:       46092 kB
+PageTables:       132532 kB
+SecPageTables:      5820 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    49615140 kB
+Committed_AS:   47233712 kB
+VmallocTotal:   34359738367 kB
+VmallocUse(anon):    628048086  Intel Corporation
+	e20b  Battlemage G64 k@
+Inactive(anon):    97804 kB
+Active(file):     459108 kB
+Inactive(file): 19225972 kB
+Unevictable:        3180 kB
+Mlocked:            3180 kB
+SwapTotal:      33554424 kB
+SwapFree:       33554424 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:              3956 kB
+Writeback:            20 kB
+AnonPages:       2304416 kB
+Mapped:          2293644 kB
+Shmem:            228052 kB
+KReclaimable:    2388376 kB
+Slab:            3161796 kB
+SReclaimable:    2388376 kB
+SUnreclaim:       773420 kB
+KernelStack:       46092 kB
+PageTables:       132532 kB
+SecPageTables:      5820 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    49615140 kB
+Committed_AS:   47233712 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      149204 kB
+VmallocChd:      149204 kB
+VmallocChunk:          0 kB
+Percpu:          21 [Arc  37536 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:     83968 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+Unaccepted:            0 kB
+Balloon:            
+0-3,8,20-11   0 kB
+GPU
+Active:         32688 kB
+GPUReclaim:            0 kB
+HugePages_Total:       0
+HugePages_Free:  
