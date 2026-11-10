@@ -17,7 +17,8 @@ ColumnLayout {
     // One column: its title. Two columns: their legend colors.
     property string valueTitle: i18nc("@title:column process list", "Usage")
     property var columnColors: []
-    property var valuesFor: process => [""]
+    // The formatted value columns of each process, in the same order as processes.
+    property var processValues: []
 
     readonly property var shown: (processes ?? []).slice(0, Math.max(0, count))
     readonly property bool twoColumns: columnColors.length === 2
@@ -85,7 +86,7 @@ ColumnLayout {
             required property int index
             readonly property bool filled: index < list.shown.length
             readonly property var modelData: list.shown[index] ?? ({ name: "" })
-            readonly property var values: filled ? list.valuesFor(modelData) : []
+            readonly property var values: filled ? (list.processValues[index] ?? []) : []
 
             Layout.fillWidth: true
             Layout.preferredHeight: list.appearance.rowHeight

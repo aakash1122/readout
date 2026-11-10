@@ -91,6 +91,6 @@ PageLayout {
         appearance: page.appearance
         processes: page.memory.processes ?? []
         count: page.configuration.processCount
-        valuesFor: process => [Format.bytes(process.memory)]
+        processValues: (page.memory.processes ?? []).map(process => [Format.bytes(process.memory)])
     }
 }

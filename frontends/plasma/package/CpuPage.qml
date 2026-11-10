@@ -157,6 +157,6 @@ PageLayout {
         appearance: page.appearance
         processes: page.cpu.processes ?? []
         count: page.configuration.processCount
-        valuesFor: process => [Format.percent(process.cpu, 1)]
+        processValues: (page.cpu.processes ?? []).map(process => [Format.percent(process.cpu, 1)])
     }
 }

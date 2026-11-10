@@ -242,6 +242,6 @@ PageLayout {
         processes: page.disk.processes ?? []
         count: page.configuration.processCount
         columnColors: [page.appearance.blue, page.appearance.red]
-        valuesFor: process => [Format.rate(process.read, page.bits), Format.rate(process.write, page.bits)]
+        processValues: (page.disk.processes ?? []).map(process => [Format.rate(process.read, page.bits), Format.rate(process.write, page.bits)])
     }
 }
