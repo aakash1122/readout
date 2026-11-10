@@ -6,7 +6,7 @@ ReadoutSource::ReadoutSource(QObject *parent)
     : QObject(parent)
 {
     ReadoutClient *client = ReadoutClient::instance();
-    connect(client, &ReadoutClient::moduleUpdated, this, [this, client](const QString &module) {
+    connect(client, &ReadoutClient::moduleUpdated, this, [this](const QString &module) {
         if (!m_modules.contains(module)) {
             return;
         }

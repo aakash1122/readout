@@ -24,7 +24,7 @@ jobs:
             systemd-devel gtest-devel dbus-daemon hwdata \
             extra-cmake-modules qt6-qtbase-devel qt6-qtbase-private-devel qt6-qtdeclarative-devel \
             kf6-ki18n-devel kf6-kcoreaddons-devel kf6-kconfig-devel kf6-knotifications-devel \
-            kf6-kquickcharts-devel kf6-kirigami-devel libplasma-devel \
+            kf6-kquickcharts-devel kf6-kirigami-devel kf6-kcmutils libplasma-devel \
             glib2-devel gettext gnome-shell
       - uses: actions/checkout@v4
       - name: Configure
@@ -47,7 +47,7 @@ jobs:
       - name: Install dependencies
         run: |
           dnf install -y --setopt=install_weak_deps=False \
-            git cmake ninja-build clang compiler-rt python3 systemd-devel gtest-devel dbus-daemon hwdata
+            git cmake ninja-build clang compiler-rt python3 systemd systemd-devel gtest-devel dbus-daemon hwdata
       - uses: actions/checkout@v4
       - name: Build
         run: |
@@ -70,7 +70,7 @@ jobs:
           apt-get update
           apt-get install -y --no-install-recommends \
             ca-certificates git cmake ninja-build g++ pkg-config python3 \
-            libsystemd-dev libgtest-dev dbus-daemon pci.ids
+            libsystemd-dev libgtest-dev dbus-daemon systemd pci.ids
       - uses: actions/checkout@v4
       - name: Build and test
         run: |
@@ -86,8 +86,8 @@ jobs:
       - name: Install dependencies
         run: |
           pacman -Syu --noconfirm --needed \
-            git cmake ninja gcc python systemd-libs gtest dbus hwdata \
-            extra-cmake-modules qt6-base qt6-declarative ki18n kcoreaddons kconfig knotifications \
+            git cmake ninja gcc pkgconf python systemd systemd-libs gtest dbus hwdata \
+            extra-cmake-modules qt6-base qt6-declarative ki18n kcoreaddons kconfig knotifications kcmutils \
             kquickcharts kirigami libplasma glib2 gettext gnome-shell
       - uses: actions/checkout@v4
       - name: Build and test

@@ -41,6 +41,7 @@ Summary:        Readout system monitor widget for KDE Plasma
 Requires:       %{name}%{?_isa} = %{version}-%{release}
 Requires:       kf6-kquickcharts
 Requires:       kf6-kirigami
+Requires:       kf6-kcmutils
 Requires:       kf6-knotifications
 Requires:       libplasma
 

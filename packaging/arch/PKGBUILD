@@ -51,7 +51,7 @@ package_readout() {
 
 package_plasma-applet-readout() {
   pkgdesc='Readout system monitor widget for KDE Plasma'
-  depends=(readout libplasma kquickcharts kirigami knotifications ki18n kconfig kcoreaddons qt6-base qt6-declarative)
+  depends=(readout libplasma kquickcharts kirigami kcmutils knotifications ki18n kconfig kcoreaddons qt6-base qt6-declarative)
   [[ -d "$srcdir/staging" ]] || _install_parts
   cd "$srcdir/staging"
   install -Dm755 usr/lib/qt6/plugins/plasma/applets/io.github.aakash1122.readout.so -t "$pkgdir/usr/lib/qt6/plugins/plasma/applets"

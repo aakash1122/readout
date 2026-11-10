@@ -406,12 +406,12 @@ void NetworkModule::encode(DictWriter& writer, const EncodeContext& context) con
     }
     writer.list("interfaces", [this, main](ListWriter& items) {
         for (const Interface& interface : interfaces_) {
-            if (&interface == main) {
-                // Always listed, even when it is a bridge (a LAN bridge can be the main link).
-            } else if (interface.kind == Kind::Loopback || interface.containerLink) {
-                continue; // container bridges and their veth ports are noise
-            } else if (interface.kind == Kind::Virtual && (!interface.up || (interface.ipv4.empty() && interface.ipv6.empty()))) {
-                continue; // idle tunnels
+            // The main link is always listed, even when it is a bridge (a LAN bridge can be the main link).
+            // Otherwise loopback, container bridges with their veth ports, and idle tunnels are noise.
+            const bool idleTunnel = interface.kind == Kind::Virtual
+                                    && (!interface.up || (interface.ipv4.empty() && interface.ipv6.empty()));
+            if (&interface != main && (interface.kind == Kind::Loopback || interface.containerLink || idleTunnel)) {
+                continue;
             }
             items.item([&interface](DictWriter& item) {
                 item.text("name", interface.name.c_str());

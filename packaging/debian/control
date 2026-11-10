@@ -37,7 +37,7 @@ Description: system monitor service for the Plasma and GNOME panels
 Package: plasma-widget-readout
 Architecture: linux-any
 Depends: ${shlibs:Depends}, ${misc:Depends}, readout (= ${binary:Version}),
-         qml6-module-org-kde-quickcharts, qml6-module-org-kde-kirigami,
+         qml6-module-org-kde-quickcharts, qml6-module-org-kde-kirigami, qml6-module-org-kde-kcmutils,
          qml6-module-org-kde-notifications, plasma-workspace (>= 4:6.3)
 Description: Readout system monitor widget for KDE Plasma
  Panel widget for KDE Plasma 6 showing CPU, memory, disk, network, GPU,
