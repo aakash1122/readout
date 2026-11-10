@@ -150,4 +150,4 @@ jobs:
           flags=()
           [ "$PRERELEASE" = true ] && flags+=(--prerelease)
           gh release create "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" \
-            --title "Readout $VERSION" --generate-notes --verify-tag "${flags[@]}" -- *
+            --title "Readout ${GITHUB_REF_NAME#v}" --generate-notes --verify-tag "${flags[@]}" -- *

@@ -9,9 +9,68 @@ System monitor for the KDE Plasma and GNOME Shell panels, inspired by [Stats](ht
 
 ## Installation
 
-### Fedora
+### Download
 
-Build the RPMs from the spec in this repository, then install them:
+Prebuilt packages are attached to every [release](https://github.com/aakash1122/readout/releases).
+Each release has three packages per distribution: the `readout` service, which every desktop needs, and one frontend per desktop.
+
+| Distribution | Service | KDE Plasma | GNOME |
+|---|---|---|---|
+| Fedora 44 | `readout-*.fc44.x86_64.rpm` | `plasma-applet-readout-*.fc44.x86_64.rpm` | `gnome-shell-extension-readout-*.fc44.noarch.rpm` |
+| Ubuntu 26.04 | `readout_*_amd64.deb` | `plasma-widget-readout_*_amd64.deb` | `gnome-shell-extension-readout_*_all.deb` |
+
+Download the service and the frontend for your desktop, then install them from the folder you saved them in.
+
+**Fedora:**
+
+```bash
+# KDE Plasma
+sudo dnf install ./readout-*.fc44.x86_64.rpm ./plasma-applet-readout-*.fc44.x86_64.rpm
+
+# GNOME
+sudo dnf install ./readout-*.fc44.x86_64.rpm ./gnome-shell-extension-readout-*.fc44.noarch.rpm
+```
+
+**Ubuntu:**
+
+```bash
+# KDE Plasma
+sudo apt install ./readout_*_amd64.deb ./plasma-widget-readout_*_amd64.deb
+
+# GNOME
+sudo apt install ./readout_*_amd64.deb ./gnome-shell-extension-readout_*_all.deb
+```
+
+The package manager installs everything else Readout needs.
+To check the downloads first, save `SHA256SUMS` from the release next to them and run `sha256sum --check --ignore-missing SHA256SUMS`.
+
+### Adding it to the panel
+
+- **KDE Plasma:** right-click the panel, choose *Add Widgets…*, and add *Readout*.
+  Add it again for every module you want in the panel, or pick several modules in one widget's settings.
+- **GNOME:** log out and back in, then run `gnome-extensions enable readout@aakash1122.github.io`.
+  Choose the modules in the extension preferences: `gnome-extensions prefs readout@aakash1122.github.io`.
+
+The `readout` service starts by itself when a widget needs it; there is nothing to enable.
+
+### Updating and removing
+
+To update, download the packages of the new release and install them the same way.
+Then restart the desktop shell, or log out and back in, so it loads the new widget.
+
+To remove Readout, remove the service; the frontends depend on it and go with it:
+
+```bash
+sudo dnf remove readout   # Fedora
+sudo apt remove readout   # Ubuntu
+```
+
+### Building it yourself
+
+Other distributions, or other versions of Fedora and Ubuntu, can build Readout from source.
+Any distribution with systemd works.
+
+#### Fedora RPMs
 
 ```bash
 sudo dnf install rpm-build git
@@ -21,20 +80,9 @@ git archive --prefix=readout-0.1.0/ -o ~/rpmbuild/SOURCES/readout-0.1.0.tar.gz H
 rpmbuild -ba packaging/fedora/readout.spec
 ```
 
-Install the daemon and the frontend for your desktop:
+The packages land in `~/rpmbuild/RPMS/`; install them as in [Download](#download).
 
-```bash
-# KDE Plasma
-sudo dnf install ~/rpmbuild/RPMS/x86_64/readout-0.1.0-*.rpm ~/rpmbuild/RPMS/x86_64/plasma-applet-readout-0.1.0-*.rpm
-
-# GNOME
-sudo dnf install ~/rpmbuild/RPMS/x86_64/readout-0.1.0-*.rpm ~/rpmbuild/RPMS/noarch/gnome-shell-extension-readout-0.1.0-*.rpm
-```
-
-### Ubuntu and Debian
-
-Ubuntu 26.04 or later has the Plasma and GNOME versions Readout needs.
-On Debian 13, only the daemon and the GNOME extension build, because its Plasma is older than 6.4; use the *From source* steps with `-DREADOUT_BUILD_PLASMA=OFF` there.
+#### Ubuntu and Debian packages
 
 ```bash
 sudo apt install devscripts equivs
@@ -44,11 +92,11 @@ dch --create --package readout --newversion 0.1.0-1 --distribution unstable "Loc
 dpkg-buildpackage -us -uc -b
 ```
 
-Then install `../readout_0.1.0-1_*.deb` together with `../plasma-widget-readout_*.deb` or `../gnome-shell-extension-readout_*.deb` using `sudo apt install ./file.deb`.
+The packages land in the parent folder; install them as in [Download](#download).
+Debian 13 has Plasma 6.3, which is older than the widget needs; build only the service and the GNOME extension there, with the steps below and `-DREADOUT_BUILD_PLASMA=OFF`.
 
-### From source
+#### Any distribution
 
-Any distribution with systemd works.
 Install the build dependencies first:
 
 ```bash
@@ -78,11 +126,6 @@ sudo cmake --install build
 ```
 
 Leave out a desktop with `-DREADOUT_BUILD_PLASMA=OFF` or `-DREADOUT_BUILD_GNOME=OFF`.
-
-### Adding it to the panel
-
-- **KDE Plasma:** right-click the panel, choose *Add Widgets…*, and add *Readout*.
-- **GNOME:** log out and back in, then run `gnome-extensions enable readout@aakash1122.github.io`.
 
 ## Requirements
 
