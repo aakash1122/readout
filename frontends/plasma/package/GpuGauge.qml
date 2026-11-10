@@ -3,7 +3,7 @@
 import QtQuick
 
 Item {
-    id: gauge
+    id: sideGauge
 
     required property Appearance appearance
     property real percent: 0
@@ -17,23 +17,23 @@ Item {
         id: ring
 
         anchors.horizontalCenter: parent.horizontalCenter
-        y: gauge.appearance.px(12)
-        width: gauge.appearance.px(50)
+        y: sideGauge.appearance.px(12)
+        width: sideGauge.appearance.px(50)
         height: width
-        appearance: gauge.appearance
+        appearance: sideGauge.appearance
         gauge: true
-        values: [gauge.percent]
-        colors: [gauge.appearance.blue]
-        text: gauge.text
+        values: [sideGauge.percent]
+        colors: [sideGauge.appearance.blue]
+        text: sideGauge.text
     }
 
     StatsText {
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.top: ring.bottom
-        anchors.topMargin: gauge.appearance.px(2)
-        appearance: gauge.appearance
+        anchors.topMargin: sideGauge.appearance.px(2)
+        appearance: sideGauge.appearance
         points: 9
-        color: gauge.appearance.label
-        text: gauge.caption
+        color: sideGauge.appearance.label
+        text: sideGauge.caption
     }
 }

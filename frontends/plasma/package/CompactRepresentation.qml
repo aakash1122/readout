@@ -20,7 +20,7 @@ MouseArea {
 
     // Resolves the panel's colors, which can differ from the popup's.
     Appearance {
-        id: appearance
+        id: panelAppearance
 
         themeItem: compact
     }
@@ -30,7 +30,7 @@ MouseArea {
     onPressed: wasExpanded = plasmoidItem.expanded
     onClicked: plasmoidItem.expanded = !wasExpanded
 
-    readonly property int padding: vertical ? 0 : appearance.px(2) * 2
+    readonly property int padding: vertical ? 0 : panelAppearance.px(2) * 2
 
     Layout.minimumWidth: vertical ? 0 : content.implicitWidth + padding
     Layout.preferredWidth: vertical ? -1 : content.implicitWidth + padding
@@ -50,8 +50,8 @@ MouseArea {
         rowSpacing: Kirigami.Units.smallSpacing * 2
         columnSpacing: Kirigami.Units.smallSpacing * 2
         // Stats leaves 2 pt before the first and after the last widget.
-        anchors.leftMargin: compact.vertical ? 0 : appearance.px(2)
-        anchors.rightMargin: compact.vertical ? 0 : appearance.px(2)
+        anchors.leftMargin: compact.vertical ? 0 : panelAppearance.px(2)
+        anchors.rightMargin: compact.vertical ? 0 : panelAppearance.px(2)
 
         Repeater {
             model: compact.context.modules
@@ -61,7 +61,7 @@ MouseArea {
 
                 module: modelData
                 context: compact.context
-                appearance: appearance
+                appearance: panelAppearance
             }
         }
     }

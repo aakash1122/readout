@@ -31,11 +31,11 @@ PlasmaExtras.Representation {
     // frame (it declares no inset), the frame already adds its own padding, so ours is reduced by that.
     readonly property bool frameCollapsed: dialogFrame.inset.left >= 0 && dialogFrame.inset.right >= 0
                                            && dialogFrame.inset.top >= 0 && dialogFrame.inset.bottom >= 0
-    readonly property int margin: Math.max(0, appearance.margin - (frameCollapsed || !inPopup ? 0 : Math.round(dialogFrame.fixedMargins.left)))
+    readonly property int margin: Math.max(0, popupAppearance.margin - (frameCollapsed || !inPopup ? 0 : Math.round(dialogFrame.fixedMargins.left)))
     readonly property bool inPopup: Window.window instanceof PlasmaCore.AppletPopup
 
     Appearance {
-        id: appearance
+        id: popupAppearance
 
         themeItem: full
         popup: true
@@ -70,10 +70,10 @@ PlasmaExtras.Representation {
     // baseline) the page only has panel-tier data and is shorter; the height it had last time
     // is kept meanwhile, so the popup opens at its final size instead of growing.
     readonly property string view: shownModule.length > 0 ? shownModule : "overview"
-    readonly property int naturalHeight: Math.ceil(appearance.headerHeight
+    readonly property int naturalHeight: Math.ceil(popupAppearance.headerHeight
         + (hasData ? body.implicitHeight + margin * 2 : Kirigami.Units.gridUnit * 12))
     readonly property bool settling: context.detail && hasData && !context.source.detailReady
-    readonly property int popupWidth: Math.ceil(appearance.contentWidth + margin * 2)
+    readonly property int popupWidth: Math.ceil(popupAppearance.contentWidth + margin * 2)
     readonly property int popupHeight: Math.ceil(Math.min(
         settling ? Math.max(naturalHeight, context.popupHeights[view] ?? 0) : naturalHeight,
         Screen.desktopAvailableHeight * 0.7))
@@ -96,7 +96,7 @@ PlasmaExtras.Representation {
     collapseMarginsHint: true
 
     header: Item {
-        implicitHeight: appearance.headerHeight
+        implicitHeight: popupAppearance.headerHeight
 
         PlasmaComponents.ToolButton {
             id: leftButton
@@ -105,10 +105,10 @@ PlasmaExtras.Representation {
 
             anchors.left: parent.left
             anchors.verticalCenter: parent.verticalCenter
-            anchors.leftMargin: Math.max(appearance.px(2), full.margin / 2)
+            anchors.leftMargin: Math.max(popupAppearance.px(2), full.margin / 2)
             visible: back || SystemMonitor.available
             icon.name: back ? "go-previous" : "office-chart-line"
-            icon.color: back ? appearance.text : appearance.lightGray
+            icon.color: back ? popupAppearance.text : popupAppearance.lightGray
             display: PlasmaComponents.AbstractButton.IconOnly
             text: back ? i18nc("@action:button back to all modules", "Back") : i18nc("@action:button", "Open System Monitor")
             onClicked: {
@@ -127,7 +127,7 @@ PlasmaExtras.Representation {
         StatsText {
             anchors.centerIn: parent
             width: parent.width - (leftButton.width + full.margin) * 2
-            appearance: appearance
+            appearance: popupAppearance
             points: 16
             horizontalAlignment: Text.AlignHCenter
             text: full.shownModule.length > 0 ? full.context.summary.titleFor(full.shownModule) : i18nc("@title popup of several modules", "System")
@@ -136,9 +136,9 @@ PlasmaExtras.Representation {
         PlasmaComponents.ToolButton {
             anchors.right: parent.right
             anchors.verticalCenter: parent.verticalCenter
-            anchors.rightMargin: Math.max(appearance.px(2), full.margin / 2)
+            anchors.rightMargin: Math.max(popupAppearance.px(2), full.margin / 2)
             icon.name: "configure"
-            icon.color: appearance.lightGray
+            icon.color: popupAppearance.lightGray
             display: PlasmaComponents.AbstractButton.IconOnly
             text: i18nc("@action:button", "Configure Readout…")
             onClicked: full.context.settingsRequested()
@@ -161,7 +161,7 @@ PlasmaExtras.Representation {
             // The scroll bar sits inside the popup frame, so the frame padding that replaces part
             // of the margin on the outer edges is not there; keep a gap of its own before it.
             readonly property int scrollBarGap: scroll.PlasmaComponents.ScrollBar.vertical.visible
-                                                ? Math.max(appearance.px(6), appearance.margin - full.margin) : 0
+                                                ? Math.max(popupAppearance.px(6), popupAppearance.margin - full.margin) : 0
 
             x: full.margin
             width: scroll.availableWidth - full.margin * 2 - scrollBarGap
@@ -175,7 +175,7 @@ PlasmaExtras.Representation {
                 visible: active
                 module: full.shownModule
                 context: full.context
-                appearance: appearance
+                appearance: popupAppearance
             }
 
             Repeater {
@@ -185,10 +185,10 @@ PlasmaExtras.Representation {
                     required property string modelData
                     required property int index
 
-                    Layout.topMargin: index > 0 ? appearance.cardSpacing : 0
+                    Layout.topMargin: index > 0 ? popupAppearance.cardSpacing : 0
                     module: modelData
                     context: full.context
-                    appearance: appearance
+                    appearance: popupAppearance
                     onOpenRequested: full.openedModule = modelData
                 }
             }
